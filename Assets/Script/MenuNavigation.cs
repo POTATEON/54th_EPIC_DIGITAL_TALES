@@ -10,11 +10,12 @@ public class MenuNavigation : MonoBehaviour
     public Button settingsButton;
     public Button exitButton;
     public Button backButton;
-
+    
     [Header("Panels")]
     public GameObject mainMenuPanel;
     public GameObject chaptersPanel;
     public GameObject settingsPanel;
+    private GameObject currentPanel;
 
     private Stack<GameObject> panelHistory = new();
 
@@ -40,7 +41,7 @@ public class MenuNavigation : MonoBehaviour
         chaptersPanel.SetActive(false);
 
         if (panelToShow != null)
-            
+            currentPanel = panelToShow;
             panelToShow.SetActive(true);
             UpdateBackButtonVisibility();
             panelHistory.Push(panelToShow);
@@ -50,6 +51,7 @@ public class MenuNavigation : MonoBehaviour
                 Debug.Log($"[{index}] {panel.name}");
                 index++;
             }
+            Debug.Log($"Первая в стеке - {panelHistory.Peek().name}");
     }
 
     void ShowMainMenu()
@@ -84,12 +86,23 @@ public class MenuNavigation : MonoBehaviour
         try
         {
             // 1. Скрываем текущую панель (убираем из стека)
-            GameObject currentPanel = panelHistory.Pop();
-
+            currentPanel = panelHistory.Pop();
+            currentPanel.SetActive(false);
             // 2. Показываем предыдущую панель (не убираем её!)
-            GameObject previousPanel = panelHistory.Peek(); // Peek, не Pop!
-            ShowPanel(previousPanel);
-
+            GameObject previousPanel = panelHistory.Peek();
+            Debug.Log($"previous {previousPanel.name}");
+            previousPanel.SetActive(true);
+            Debug.Log($"curremt {currentPanel.name}");
+            currentPanel = previousPanel;
+            Debug.Log($"curremt {currentPanel.name}");
+            UpdateBackButtonVisibility();
+            int index = 0;
+            foreach (GameObject panel in panelHistory)
+            {
+                Debug.Log($"[{index}] {panel.name}");
+                index++;
+            }
+            Debug.Log($"Первая в стеке - {panelHistory.Peek().name}");
             Debug.Log($"Вернулись с {currentPanel.name} на {previousPanel.name}");
         }
         catch (Exception ex)
@@ -108,8 +121,7 @@ public class MenuNavigation : MonoBehaviour
         bool isMainMenu = false;
 
         if (panelHistory.Count > 0)
-        {
-            GameObject currentPanel = panelHistory.Peek(); // ВЕРХНИЙ элемент!
+        { // ВЕРХНИЙ элемент!
             if (currentPanel != null)
             {
                 // Сравниваем текущую (верхнюю) панель
