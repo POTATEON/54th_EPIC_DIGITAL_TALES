@@ -9,62 +9,62 @@ public class AnimatedButtonText : MonoBehaviour,
     IPointerDownHandler, IPointerUpHandler,
     ISelectHandler, IDeselectHandler
 {
-    [Header("Текстовый компонент")]
-    [Tooltip("Перетащи сюда TextMeshPro текст кнопки. Если оставить пустым, найдет автоматически")]
+    [Header("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ")]
+    [Tooltip("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ TextMeshPro пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ. пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ")]
     public TMP_Text buttonText;
 
-    [Header("ЦВЕТА ТЕКСТА")]
+    [Header("пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ")]
     [Space(10)]
 
-    [Tooltip("Цвет текста в обычном состоянии")]
-    public Color normalColor = new Color(0.2f, 0.2f, 0.2f, 1f); // Темно-серый
+    [Tooltip("пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ")]
+    public Color normalColor = new Color(0.2f, 0.2f, 0.2f, 1f); // пїЅпїЅпїЅпїЅпїЅ-пїЅпїЅпїЅпїЅпїЅ
 
-    [Tooltip("Цвет текста при наведении курсора")]
-    public Color hoverColor = new Color(0.1f, 0.3f, 0.6f, 1f);   // Синий
+    [Tooltip("пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ")]
+    public Color hoverColor = new Color(0.1f, 0.3f, 0.6f, 1f);   // пїЅпїЅпїЅпїЅпїЅ
 
-    [Tooltip("Цвет текста при нажатии кнопки мыши")]
-    public Color pressedColor = new Color(0.8f, 0.1f, 0.1f, 1f); // Красный
+    [Tooltip("пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ")]
+    public Color pressedColor = new Color(0.8f, 0.1f, 0.1f, 1f); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 
-    [Tooltip("Цвет текста когда кнопка выбрана (например, через Tab)")]
-    public Color selectedColor = new Color(0f, 0.6f, 0f, 1f);    // Зеленый
+    [Tooltip("пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ (пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅ Tab)")]
+    public Color selectedColor = new Color(0f, 0.6f, 0f, 1f);    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 
-    [Tooltip("Цвет текста когда кнопка отключена")]
-    public Color disabledColor = new Color(0.5f, 0.5f, 0.5f, 0.5f); // Серый полупрозрачный
+    [Tooltip("пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ")]
+    public Color disabledColor = new Color(0.5f, 0.5f, 0.5f, 0.5f); // пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 
-    [Header("НАСТРОЙКИ АНИМАЦИИ")]
+    [Header("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ")]
     [Space(10)]
 
-    [Tooltip("Скорость плавного изменения цвета (рекомендуется 8-15)")]
+    [Tooltip("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ (пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ 8-15)")]
     [Range(1f, 30f)]
     public float colorChangeSpeed = 8f;
 
-    [Tooltip("Использовать плавное изменение цвета")]
+    [Tooltip("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ")]
     public bool useSmoothTransition = true;
 
-    [Tooltip("Возвращаться к normalColor при отпускании кнопки (иначе вернется к hoverColor)")]
+    [Tooltip("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ normalColor пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ (пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ hoverColor)")]
     public bool returnToNormalOnRelease = false;
 
-    [Header("ДОПОЛНИТЕЛЬНЫЕ ЭФФЕКТЫ")]
+    [Header("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ")]
     [Space(10)]
 
-    [Tooltip("Изменять размер текста при наведении")]
+    [Tooltip("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ")]
     public bool scaleOnHover = false;
 
-    [Tooltip("Множитель размера при наведении")]
+    [Tooltip("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ")]
     [Range(0.5f, 2f)]
     public float hoverScale = 1.1f;
 
-    [Tooltip("Скорость изменения размера")]
+    [Tooltip("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ")]
     [Range(1f, 20f)]
     public float scaleSpeed = 10f;
 
-    [Tooltip("Добавить тень тексту")]
+    [Tooltip("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ")]
     public bool addTextShadow = true;
 
-    [Tooltip("Цвет тени текста")]
+    [Tooltip("пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ")]
     public Color shadowColor = new Color(0f, 0f, 0f, 0.5f);
 
-    // Приватные переменные
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     private Color targetColor;
     private Vector3 originalScale;
     private Vector3 targetScale;
@@ -74,14 +74,14 @@ public class AnimatedButtonText : MonoBehaviour,
 
     void Start()
     {
-        // Инициализация компонентов
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         InitializeComponents();
 
-        // Сохраняем оригинальный размер
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
         originalScale = buttonText.transform.localScale;
         targetScale = originalScale;
 
-        // Устанавливаем начальный цвет
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
         if (button != null && !button.interactable)
         {
             targetColor = disabledColor;
@@ -93,13 +93,13 @@ public class AnimatedButtonText : MonoBehaviour,
             buttonText.color = normalColor;
         }
 
-        // Добавляем тень если нужно
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
         if (addTextShadow && textShadow == null)
         {
             AddTextShadow();
         }
 
-        // Настраиваем прозрачность для CanvasGroup
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ CanvasGroup
         if (textCanvasGroup != null)
         {
             textCanvasGroup.alpha = (button != null && !button.interactable) ? 0.5f : 1f;
@@ -108,30 +108,30 @@ public class AnimatedButtonText : MonoBehaviour,
 
     void InitializeComponents()
     {
-        // Находим текстовый компонент если не назначен
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         if (buttonText == null)
         {
             buttonText = GetComponentInChildren<TMP_Text>(true);
 
             if (buttonText == null)
             {
-                Debug.LogWarning("TextMeshPro текст не найден на кнопке: " + gameObject.name);
+                Debug.LogWarning("TextMeshPro пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ: " + gameObject.name);
                 enabled = false;
                 return;
             }
         }
 
-        // Находим компонент Button
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ Button
         button = GetComponent<Button>();
 
-        // Добавляем или находим CanvasGroup для текста (для управления прозрачностью)
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ CanvasGroup пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ (пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ)
         textCanvasGroup = buttonText.GetComponent<CanvasGroup>();
         if (textCanvasGroup == null)
         {
             textCanvasGroup = buttonText.gameObject.AddComponent<CanvasGroup>();
         }
 
-        // Проверяем есть ли тень
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ
         textShadow = buttonText.GetComponent<Shadow>();
     }
 
@@ -146,7 +146,7 @@ public class AnimatedButtonText : MonoBehaviour,
     {
         if (buttonText == null) return;
 
-        // Плавное изменение цвета
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
         if (useSmoothTransition)
         {
             buttonText.color = Color.Lerp(buttonText.color, targetColor,
@@ -157,7 +157,7 @@ public class AnimatedButtonText : MonoBehaviour,
             buttonText.color = targetColor;
         }
 
-        // Плавное изменение размера
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         if (scaleOnHover)
         {
             buttonText.transform.localScale = Vector3.Lerp(
@@ -167,7 +167,7 @@ public class AnimatedButtonText : MonoBehaviour,
             );
         }
 
-        // Синхронизация с состоянием кнопки
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
         if (button != null && !button.interactable && targetColor != disabledColor)
         {
             targetColor = disabledColor;
@@ -175,9 +175,9 @@ public class AnimatedButtonText : MonoBehaviour,
         }
     }
 
-    // === ОБРАБОТЧИКИ СОБЫТИЙ ===
+    // === пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ ===
 
-    // При наведении мыши
+    // пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
     public void OnPointerEnter(PointerEventData eventData)
     {
         if (button != null && !button.interactable) return;
@@ -185,11 +185,11 @@ public class AnimatedButtonText : MonoBehaviour,
         targetColor = hoverColor;
         if (scaleOnHover) targetScale = originalScale * hoverScale;
 
-        // Восстанавливаем прозрачность если была отключена
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         if (textCanvasGroup != null) textCanvasGroup.alpha = 1f;
     }
 
-    // При уходе мыши
+    // пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
     public void OnPointerExit(PointerEventData eventData)
     {
         if (button != null && !button.interactable)
@@ -205,21 +205,21 @@ public class AnimatedButtonText : MonoBehaviour,
         if (scaleOnHover) targetScale = originalScale;
     }
 
-    // При нажатии кнопки мыши
+    // пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
     public void OnPointerDown(PointerEventData eventData)
     {
         if (button != null && !button.interactable) return;
 
         targetColor = pressedColor;
 
-        // Эффект "нажатия" масштабом
+        // пїЅпїЅпїЅпїЅпїЅпїЅ "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ" пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         if (scaleOnHover)
         {
             targetScale = originalScale * 0.95f;
         }
     }
 
-    // При отпускании кнопки мыши
+    // пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
     public void OnPointerUp(PointerEventData eventData)
     {
         if (button != null && !button.interactable) return;
@@ -236,7 +236,7 @@ public class AnimatedButtonText : MonoBehaviour,
         if (scaleOnHover) targetScale = originalScale * hoverScale;
     }
 
-    // При выборе кнопки (например, через Tab)
+    // пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ (пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅ Tab)
     public void OnSelect(BaseEventData eventData)
     {
         if (button != null && !button.interactable) return;
@@ -245,7 +245,7 @@ public class AnimatedButtonText : MonoBehaviour,
         if (scaleOnHover) targetScale = originalScale * hoverScale;
     }
 
-    // При снятии выбора
+    // пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
     public void OnDeselect(BaseEventData eventData)
     {
         if (button != null && !button.interactable)
@@ -261,16 +261,16 @@ public class AnimatedButtonText : MonoBehaviour,
         if (scaleOnHover) targetScale = originalScale;
     }
 
-    // === ПУБЛИЧНЫЕ МЕТОДЫ ДЛЯ РУЧНОГО УПРАВЛЕНИЯ ===
+    // === пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ ===
 
-    // Принудительно установить цвет
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
     public void SetTextColor(Color color, bool immediate = false)
     {
         targetColor = color;
         if (immediate) buttonText.color = color;
     }
 
-    // Вернуть оригинальный цвет
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
     public void ResetToNormalColor(bool immediate = false)
     {
         targetColor = normalColor;
@@ -278,7 +278,7 @@ public class AnimatedButtonText : MonoBehaviour,
         if (scaleOnHover) targetScale = originalScale;
     }
 
-    // Включить/выключить кнопку
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ/пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
     public void SetInteractable(bool interactable)
     {
         if (button != null)
@@ -298,50 +298,50 @@ public class AnimatedButtonText : MonoBehaviour,
         }
     }
 
-    // Изменить цвет в реальном времени
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     public void ChangeColors(Color newNormal, Color newHover, Color newPressed)
     {
         normalColor = newNormal;
         hoverColor = newHover;
         pressedColor = newPressed;
 
-        // Если сейчас в нормальном состоянии - обновляем цвет
+        // пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ - пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ
         if (targetColor == normalColor)
         {
             targetColor = newNormal;
         }
     }
 
-    // === МЕТОДЫ ДЛЯ РЕДАКТОРА UNITY ===
+    // === пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ UNITY ===
 
-    // Проверка в редакторе
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     void OnValidate()
     {
-        // Автоматически находим текст при изменении в редакторе
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         if (buttonText == null)
         {
             buttonText = GetComponentInChildren<TMP_Text>(true);
         }
 
-        // Обновляем тень если нужно
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
         if (addTextShadow && Application.isEditor && !Application.isPlaying)
         {
             if (buttonText != null)
             {
                 Shadow existingShadow = buttonText.GetComponent<Shadow>();
-                if (existingShadow == null)
-                {
-                    // В редакторе просто предупреждаем, добавится при запуске
-                    Debug.Log("Тень будет добавлена при запуске игры");
-                }
+                // if (existingShadow == null)
+                // {
+                //     // пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+                //     Debug.Log("пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ");
+                // }
             }
         }
     }
 
-    // Очистка при удалении компонента
+    // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     void OnDestroy()
     {
-        // Возвращаем оригинальный цвет и размер
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
         if (buttonText != null)
         {
             buttonText.color = normalColor;

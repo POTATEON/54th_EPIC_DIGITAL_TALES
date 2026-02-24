@@ -4,19 +4,16 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class MenuNavigation : MonoBehaviour
+public class GameMenu : MonoBehaviour
 {
     [Header("Buttons")]
-    public Button startButton;
-    public Button settingsButton;
-    public Button exitButton;
+    public Button menuButton;
     public Button backButton;
-    public Button logButton;
+    public Button menuSceneButton;
 
     [Header("Panels")]
-    public GameObject mainMenuPanel;
-    public GameObject chaptersPanel;
-    public GameObject settingsPanel;
+    public GameObject mainPanel;
+    public GameObject menuPanel;
     private GameObject currentPanel;
 
     private Stack<GameObject> panelHistory = new();
@@ -29,11 +26,14 @@ public class MenuNavigation : MonoBehaviour
 
     void InitializeButtons()
     {
-        startButton.onClick.AddListener(OnStartButtonClicked);
-        settingsButton.onClick.AddListener(OnSettingsButtonClicked);
-        exitButton.onClick.AddListener(OnExitButtonClicked);
+        menuButton.onClick.AddListener(OnMenuButtonClicked);
         backButton.onClick.AddListener(OnBackButtonClicked);
-        logButton.onClick.AddListener(OnLogButtonClicked);
+        menuSceneButton.onClick.AddListener(OnMenuSceneButtonClicked);
+    }
+
+    void ShowMainMenu()
+    {
+        ShowPanel(mainPanel);
     }
 
     void ShowPanel(GameObject panelToShow)
@@ -52,35 +52,25 @@ public class MenuNavigation : MonoBehaviour
         }
 
         // Hide all panels
-        mainMenuPanel.SetActive(false);
-        settingsPanel.SetActive(false);
-        chaptersPanel.SetActive(false);
+        mainPanel.SetActive(false);
+        menuPanel.SetActive(false);
 
-        // FIX: All lines are now inside a proper block — no missing braces
+        // Show the requested panel
         panelToShow.SetActive(true);
         currentPanel = panelToShow;
         panelHistory.Push(panelToShow);
 
-        UpdateBackButtonVisibility();
+        // FIX: Compare by reference, not by name
+        menuButton.interactable = (panelToShow == mainPanel);
 
         Debug.Log($"Navigated to: {panelToShow.name} | Stack depth: {panelHistory.Count}");
     }
 
-    void ShowMainMenu()
+    void OnMenuButtonClicked()
     {
-        ShowPanel(mainMenuPanel);
-    }
-
-    void OnStartButtonClicked()
-    {
-        Debug.Log("Start button clicked");
-        ShowPanel(chaptersPanel);
-    }
-
-    void OnSettingsButtonClicked()
-    {
-        Debug.Log("Settings button clicked");
-        ShowPanel(settingsPanel);
+        Debug.Log("Menu button clicked");
+        menuButton.interactable = false;
+        ShowPanel(menuPanel);
     }
 
     void OnBackButtonClicked()
@@ -104,44 +94,20 @@ public class MenuNavigation : MonoBehaviour
             previousPanel.SetActive(true);
             currentPanel = previousPanel;
 
-            UpdateBackButtonVisibility();
+            // FIX: Compare by reference, not by name
+            menuButton.interactable = (currentPanel == mainPanel);
 
             Debug.Log($"Went back to: {previousPanel.name} | Stack depth: {panelHistory.Count}");
         }
         catch (Exception ex)
         {
             Debug.LogError($"Error navigating back: {ex.Message}");
-            // Fallback to main menu on unexpected error
-            ShowMainMenu();
         }
     }
 
-    private void OnLogButtonClicked()
+    private void OnMenuSceneButtonClicked()
     {
-        Debug.Log("Log Button Clicked");
-        SceneManager.LoadScene("Gameplay");
-    }
-
-    private void UpdateBackButtonVisibility()
-    {
-        if (backButton == null) return;
-
-        // FIX: Compare by reference instead of hardcoded name string "MainPanel"
-        bool isMainMenu = (currentPanel == mainMenuPanel);
-
-        backButton.gameObject.SetActive(!isMainMenu);
-
-        Debug.Log($"Back button: {(isMainMenu ? "hidden" : "visible")} | Current panel: {currentPanel?.name}");
-    }
-
-    void OnExitButtonClicked()
-    {
-        Debug.Log("Exit button clicked");
-
-#if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
-#else
-        Application.Quit();
-#endif
+        Debug.Log("MenuScene Button Clicked");
+        SceneManager.LoadScene("MainMenu");
     }
 }

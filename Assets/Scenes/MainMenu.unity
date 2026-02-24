@@ -426,6 +426,7 @@ MonoBehaviour:
   settingsButton: {fileID: 184891452}
   exitButton: {fileID: 2036327750}
   backButton: {fileID: 522625053}
+  logButton: {fileID: 226650169}
   mainMenuPanel: {fileID: 2137741495}
   chaptersPanel: {fileID: 571477057}
   settingsPanel: {fileID: 1217484185}
