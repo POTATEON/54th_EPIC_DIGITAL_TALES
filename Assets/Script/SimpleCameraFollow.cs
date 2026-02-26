@@ -1,27 +1,36 @@
-// SmoothCameraFollow.cs - ЭТО ПРАВИЛЬНАЯ ПЛАВНОСТЬ
 using UnityEngine;
 
 public class SmoothCameraFollow : MonoBehaviour
 {
-    public Transform target;      // Перетащи сюда игрока
-    public float smoothSpeed = 5f; // Чем больше - тем плавнее (5-10)
+    public Transform target;
+    public float followSmoothSpeed = 5f; // FIX: РїРµСЂРµРёРјРµРЅРѕРІР°РЅРѕ СЃ smoothSpeed РІРѕ РёР·Р±РµР¶Р°РЅРёРµ РїСѓС‚Р°РЅРёС†С‹ СЃ РїРѕР»РµРј РІ PlayerController
     public Vector3 offset = new Vector3(0, 0, -10);
 
-    private Vector3 velocity = Vector3.zero;
+    // РћРїС†РёРѕРЅР°Р»СЊРЅРѕ: РѕРіСЂР°РЅРёС‡РµРЅРёРµ РєР°РјРµСЂС‹ РїРѕ РіСЂР°РЅРёС†Р°Рј СѓСЂРѕРІРЅСЏ
+    [Header("Camera Bounds (optional)")]
+    public bool useBounds = false;
+    public float minX, maxX, minY, maxY;
+
+    private Vector3 _velocity = Vector3.zero;
 
     void LateUpdate()
     {
         if (target == null) return;
 
-        // Целевая позиция камеры
         Vector3 targetPosition = target.position + offset;
 
-        // ПЛАВНОЕ движение с SmoothDamp
+        // Р—Р°Р¶РёРјР°РµРј РїРѕР·РёС†РёСЋ РєР°РјРµСЂС‹ РІ РїСЂРµРґРµР»Р°С… РєР°СЂС‚С‹ (РµСЃР»Рё РІРєР»СЋС‡РµРЅРѕ)
+        if (useBounds)
+        {
+            targetPosition.x = Mathf.Clamp(targetPosition.x, minX, maxX);
+            targetPosition.y = Mathf.Clamp(targetPosition.y, minY, maxY);
+        }
+
         transform.position = Vector3.SmoothDamp(
-            transform.position,    // Текущая позиция
-            targetPosition,        // Целевая позиция  
-            ref velocity,          // Скорость (изменяется автоматически)
-            1f / smoothSpeed       // Время достижения цели
+            transform.position,
+            targetPosition,
+            ref _velocity,
+            1f / followSmoothSpeed
         );
     }
 }

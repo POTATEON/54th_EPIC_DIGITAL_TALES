@@ -1,5 +1,3 @@
-using System;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -17,131 +15,64 @@ public class MenuNavigation : MonoBehaviour
     public GameObject mainMenuPanel;
     public GameObject chaptersPanel;
     public GameObject settingsPanel;
-    private GameObject currentPanel;
 
-    private Stack<GameObject> panelHistory = new();
+    private PanelNavigator _navigator;
 
     private void Start()
     {
-        InitializeButtons();
-        ShowMainMenu();
-    }
+        _navigator = new PanelNavigator(mainMenuPanel, chaptersPanel, settingsPanel);
 
-    void InitializeButtons()
-    {
         startButton.onClick.AddListener(OnStartButtonClicked);
         settingsButton.onClick.AddListener(OnSettingsButtonClicked);
         exitButton.onClick.AddListener(OnExitButtonClicked);
         backButton.onClick.AddListener(OnBackButtonClicked);
         logButton.onClick.AddListener(OnLogButtonClicked);
-    }
 
-    void ShowPanel(GameObject panelToShow)
-    {
-        if (panelToShow == null)
-        {
-            Debug.LogWarning("ShowPanel called with null panel.");
-            return;
-        }
-
-        // FIX: Don't push if this panel is already on top (prevents duplicate history entries)
-        if (panelHistory.Count > 0 && panelHistory.Peek() == panelToShow)
-        {
-            Debug.Log($"Panel {panelToShow.name} is already on top of the stack, skipping push.");
-            return;
-        }
-
-        // Hide all panels
-        mainMenuPanel.SetActive(false);
-        settingsPanel.SetActive(false);
-        chaptersPanel.SetActive(false);
-
-        // FIX: All lines are now inside a proper block — no missing braces
-        panelToShow.SetActive(true);
-        currentPanel = panelToShow;
-        panelHistory.Push(panelToShow);
-
-        UpdateBackButtonVisibility();
-
-        Debug.Log($"Navigated to: {panelToShow.name} | Stack depth: {panelHistory.Count}");
-    }
-
-    void ShowMainMenu()
-    {
-        ShowPanel(mainMenuPanel);
+        _navigator.ShowPanel(mainMenuPanel);
+        UpdateBackButton();
     }
 
     void OnStartButtonClicked()
     {
-        Debug.Log("Start button clicked");
-        ShowPanel(chaptersPanel);
+        Debug.Log("Start нажата");
+        _navigator.ShowPanel(chaptersPanel);
+        UpdateBackButton();
     }
 
     void OnSettingsButtonClicked()
     {
-        Debug.Log("Settings button clicked");
-        ShowPanel(settingsPanel);
+        Debug.Log("Settings нажата");
+        _navigator.ShowPanel(settingsPanel);
+        UpdateBackButton();
     }
 
     void OnBackButtonClicked()
     {
-        Debug.Log("Back button clicked");
-
-        if (panelHistory.Count <= 1)
-        {
-            Debug.LogWarning("Already at root panel, cannot go back.");
-            return;
-        }
-
-        try
-        {
-            // Pop the current panel and hide it
-            GameObject poppedPanel = panelHistory.Pop();
-            poppedPanel.SetActive(false);
-
-            // Reveal the previous panel
-            GameObject previousPanel = panelHistory.Peek();
-            previousPanel.SetActive(true);
-            currentPanel = previousPanel;
-
-            UpdateBackButtonVisibility();
-
-            Debug.Log($"Went back to: {previousPanel.name} | Stack depth: {panelHistory.Count}");
-        }
-        catch (Exception ex)
-        {
-            Debug.LogError($"Error navigating back: {ex.Message}");
-            // Fallback to main menu on unexpected error
-            ShowMainMenu();
-        }
+        Debug.Log("Back нажата");
+        _navigator.GoBack();
+        UpdateBackButton();
     }
 
-    private void OnLogButtonClicked()
+    void OnLogButtonClicked()
     {
-        Debug.Log("Log Button Clicked");
+        Debug.Log("Log нажата");
         SceneManager.LoadScene("Gameplay");
-    }
-
-    private void UpdateBackButtonVisibility()
-    {
-        if (backButton == null) return;
-
-        // FIX: Compare by reference instead of hardcoded name string "MainPanel"
-        bool isMainMenu = (currentPanel == mainMenuPanel);
-
-        backButton.gameObject.SetActive(!isMainMenu);
-
-        Debug.Log($"Back button: {(isMainMenu ? "hidden" : "visible")} | Current panel: {currentPanel?.name}");
     }
 
     void OnExitButtonClicked()
     {
-        Debug.Log("Exit button clicked");
-
+        Debug.Log("Exit нажата");
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
 #else
         Application.Quit();
 #endif
+    }
+
+    void UpdateBackButton()
+    {
+        if (backButton == null) return;
+        // Скрываем кнопку Back на главном меню
+        backButton.gameObject.SetActive(_navigator.Current != mainMenuPanel);
     }
 }

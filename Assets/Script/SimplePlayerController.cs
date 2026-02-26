@@ -6,16 +6,18 @@ public class SimplePlayerController : MonoBehaviour
 {
     [Header("Movement Settings")]
     public float moveSpeed = 8f;
-    public float runMultiplier = 1.6f;          // FIX: was 1.0005f (effectively no run boost)
+    public float runMultiplier = 1.6f;
 
     [Header("Jump Settings")]
     public float jumpForce = 15f;
-    public float coyoteTime = 0.12f;            // NEW: grace period after walking off a ledge
-    public float jumpBufferTime = 0.15f;        // NEW: queues a jump if pressed slightly early
+    public float coyoteTime = 0.12f;
+    public float jumpBufferTime = 0.15f;
 
     [Header("Air Control")]
-    public float airControlMultiplier = 0.8f;   // FIX: replaces the conflicting 0.5f mid-air halving
-    public float maxAirSpeed = 12f;             // FIX: now a separate field, was moveSpeed * 1.5f hardcoded
+    public float airControlMultiplier = 0.8f;
+    public float maxAirSpeed = 12f;
+    public float airAcceleration = 8f;          // NEW: насколько быстро подтягиваемся к желаемой скорости в воздухе
+                                                //      меньше = больше инерции, меньше контроля (попробуй 5–15)
 
     [Header("Animation Settings")]
     public float animationThreshold = 0.1f;
@@ -36,10 +38,14 @@ public class SimplePlayerController : MonoBehaviour
     private bool runPressed;
 
     // Jump state
-    private bool jumpPressed;           // set by input, consumed in FixedUpdate
-    private bool isJumping;             // true while airborne after a jump
-    private float coyoteTimer;          // counts down after leaving ground
-    private float jumpBufferTimer;      // counts down after jump input
+    private bool jumpPressed;
+    private bool isJumping;
+    private float coyoteTimer;
+    private float jumpBufferTimer;
+    private bool jumpHeld;
+    private float jumpHeldTimer;
+    public float jumpHoldForce = 25f;
+    public float maxJumpHoldTime = 1f;
 
     // Animation state
     private bool isWalking;
@@ -47,7 +53,7 @@ public class SimplePlayerController : MonoBehaviour
     private float smoothSpeed;
     private float speedVelocity;
 
-    // Grounded state cached per-frame to avoid multiple OverlapCircle calls
+    // Grounded state cached per-frame
     private bool wasGrounded;
     private bool isGrounded;
 
@@ -56,13 +62,9 @@ public class SimplePlayerController : MonoBehaviour
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-
-        // Auto-assign visuals if not set in Inspector
         if (spriteRenderer == null) spriteRenderer = GetComponent<SpriteRenderer>();
-        if (animator == null)       animator       = GetComponent<Animator>();
+        if (animator == null) animator = GetComponent<Animator>();
     }
-
-    // --- Input callbacks (hooked up via Player Input component) ---
 
     public void OnMove(InputAction.CallbackContext context)
     {
@@ -73,15 +75,16 @@ public class SimplePlayerController : MonoBehaviour
     {
         if (context.performed)
         {
-            // FIX: don't gate the jump here on IsGrounded — that's handled in FixedUpdate
-            // using coyote time + jump buffer instead
             jumpBufferTimer = jumpBufferTime;
+            jumpHeld = true;
+            jumpHeldTimer = 0f;
         }
 
-        // Allow early release to cut jump height (feel improvement)
-        if (context.canceled && rb.linearVelocity.y > 0f)
+        if (context.canceled)
         {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
+            jumpHeld = false;
+            if (rb.linearVelocity.y > 0f)
+                rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
         }
     }
 
@@ -94,12 +97,10 @@ public class SimplePlayerController : MonoBehaviour
 
     void Update()
     {
-        // Cache grounded check once per frame
         wasGrounded = isGrounded;
-        isGrounded  = CheckGrounded();
+        isGrounded = CheckGrounded();
 
         // --- Coyote time ---
-        // Reset timer when grounded; count down when airborne
         if (isGrounded)
             coyoteTimer = coyoteTime;
         else
@@ -109,61 +110,77 @@ public class SimplePlayerController : MonoBehaviour
         if (jumpBufferTimer > 0f)
             jumpBufferTimer -= Time.deltaTime;
 
-        // --- Consume buffered jump if we have ground eligibility ---
+        // --- Consume buffered jump ---
         bool canJump = coyoteTimer > 0f;
         if (jumpBufferTimer > 0f && canJump)
         {
-            jumpPressed      = true;
-            jumpBufferTimer  = 0f;
-            coyoteTimer      = 0f;  // consume coyote window so we don't double-jump
+            jumpPressed = true;
+            jumpBufferTimer = 0f;
+            coyoteTimer = 0f;
+        }
+
+        // --- Удержание прыжка ---
+        if (jumpHeld && isJumping && jumpHeldTimer < maxJumpHoldTime)
+        {
+            jumpHeldTimer += Time.fixedDeltaTime;
+            float holdRatio = 1f - (jumpHeldTimer / maxJumpHoldTime);
+            rb.AddForce(Vector2.up * jumpHoldForce * holdRatio, ForceMode2D.Force);
+        }
+
+        // --- Сброс при приземлении ---
+        if (isGrounded)
+        {
+            jumpHeld = false;
+            jumpHeldTimer = 0f;
         }
 
         // --- Detect landing ---
-        // FIX: was resetting isJumping the same frame as the jump using IsGrounded,
-        // which could instantly cancel the jump state. Now we wait until we've
-        // actually left the ground first (wasGrounded -> !isGrounded transition).
         if (isJumping && isGrounded && !wasGrounded == false && rb.linearVelocity.y <= 0f)
-        {
             isJumping = false;
-        }
 
         // --- Sprite flip ---
-        if (moveInput.x > 0f)       spriteRenderer.flipX = false;
-        else if (moveInput.x < 0f)  spriteRenderer.flipX = true;
+        if (moveInput.x > 0f) spriteRenderer.flipX = false;
+        else if (moveInput.x < 0f) spriteRenderer.flipX = true;
 
-        // --- Animation speed smoothing (grounded only, freeze mid-air) ---
+        // --- Animation speed smoothing ---
         if (isGrounded)
         {
             float targetSpeed = Mathf.Abs(rb.linearVelocity.x);
             smoothSpeed = Mathf.SmoothDamp(smoothSpeed, targetSpeed, ref speedVelocity, animationSmoothTime);
-            isWalking   = smoothSpeed > animationThreshold;
-            isRunning   = isWalking && runPressed && smoothSpeed > moveSpeed * 0.5f;
+            isWalking = smoothSpeed > animationThreshold;
+            isRunning = isWalking && runPressed && smoothSpeed > moveSpeed * 0.5f;
         }
 
-        // --- Push to Animator ---
         if (animator != null)
         {
-            animator.SetFloat("Speed",         smoothSpeed / moveSpeed);   // FIX: normalized by moveSpeed, not magic /200
-            animator.SetBool("walkPressed",    isWalking && isGrounded);
-            animator.SetBool("runPressed",     isRunning && isGrounded);
-            animator.SetBool("IsGrounded",     isGrounded);
+            animator.SetFloat("Speed", smoothSpeed / moveSpeed);
+            animator.SetBool("walkPressed", isWalking && isGrounded);
+            animator.SetBool("runPressed", isRunning && isGrounded);
+            animator.SetBool("IsGrounded", isGrounded);
             animator.SetFloat("VerticalSpeed", rb.linearVelocity.y);
-            animator.SetBool("IsJumping",      isJumping);
+            animator.SetBool("IsJumping", isJumping);
         }
     }
 
     void FixedUpdate()
     {
         // --- Horizontal movement ---
-        // FIX: air control is now a clean multiplier, no conflict with the air speed clamp
-        float speed = moveSpeed * (runPressed ? runMultiplier : 1f);
-        if (!isGrounded) speed *= airControlMultiplier;
+        float targetSpeed = moveInput.x * moveSpeed * (runPressed ? runMultiplier : 1f);
 
-        rb.linearVelocity = new Vector2(moveInput.x * speed, rb.linearVelocity.y);
-
-        // --- Clamp horizontal air speed ---
-        if (!isGrounded)
+        if (isGrounded)
         {
+            // На земле — мгновенная установка скорости (чёткое управление)
+            rb.linearVelocity = new Vector2(targetSpeed, rb.linearVelocity.y);
+        }
+        else
+        {
+            // В воздухе — AddForce к желаемой скорости, чтобы сохранялась инерция.
+            // speedDiff определяет "тягу" к желаемому направлению, но не телепортирует скорость.
+            float currentX = rb.linearVelocity.x;
+            float speedDiff = targetSpeed * airControlMultiplier - currentX;
+            rb.AddForce(new Vector2(speedDiff * airAcceleration, 0f), ForceMode2D.Force);
+
+            // Clamp горизонтальной скорости в воздухе
             rb.linearVelocity = new Vector2(
                 Mathf.Clamp(rb.linearVelocity.x, -maxAirSpeed, maxAirSpeed),
                 rb.linearVelocity.y
@@ -173,14 +190,18 @@ public class SimplePlayerController : MonoBehaviour
         // --- Execute jump ---
         if (jumpPressed)
         {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f); // zero out vertical before impulse
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f);
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-            isJumping   = true;
+            isJumping = true;
             jumpPressed = false;
 
             if (animator != null)
                 animator.SetTrigger("Jump");
         }
+
+        // --- Тяжёлое падение ---
+        if (rb.linearVelocity.y < 0f)
+            rb.AddForce(Vector2.down * 20f, ForceMode2D.Force);
     }
 
     // -------------------------------------------------------------------------
