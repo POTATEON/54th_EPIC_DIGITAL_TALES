@@ -167,7 +167,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &24014275
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -178,7 +178,7 @@ BoxCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: e342b3e5bcddcbb409a84d86244e23cf, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -202,7 +202,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0.01021266}
+  m_Offset: {x: -0.0979266, y: 0.01021266}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -212,7 +212,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 2.4093308}
+  m_Size: {x: 0.80414677, y: 2.4093308}
   m_EdgeRadius: 0
 --- !u!4 &24014277
 Transform:
@@ -257,9 +257,9 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 24014282}
+      - m_Target: {fileID: 11500000, guid: 7772cae85f261604a833d2053c5cee78, type: 3}
         m_TargetAssemblyTypeName: SimplePlayerController, Assembly-CSharp
-        m_MethodName: OnMove
+        m_MethodName: 
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -273,9 +273,9 @@ MonoBehaviour:
     m_ActionName: 'PlayerControls/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]'
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 24014282}
+      - m_Target: {fileID: 11500000, guid: 7772cae85f261604a833d2053c5cee78, type: 3}
         m_TargetAssemblyTypeName: SimplePlayerController, Assembly-CSharp
-        m_MethodName: OnJump
+        m_MethodName: 
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -305,7 +305,7 @@ MonoBehaviour:
     m_ActionName: 'PlayerControls/Interact[/Keyboard/e]'
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 24014282}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SimplePlayerController, Assembly-CSharp
         m_MethodName: OnRun
         m_Mode: 0
@@ -321,7 +321,7 @@ MonoBehaviour:
     m_ActionName: 'PlayerControls/Run[/Keyboard/shift]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: PlayerControls
+  m_DefaultActionMap: 
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 120327522}
 --- !u!212 &24014280
@@ -414,28 +414,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 24014273}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58753f72f3b4a744fa2bdcf748805fe8, type: 3}
+  m_Script: {fileID: 11500000, guid: 7772cae85f261604a833d2053c5cee78, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SimplePlayerController
-  moveSpeed: 200
-  runMultiplier: 1.6
-  jumpForce: 215
-  coyoteTime: 0.12
-  jumpBufferTime: 0.15
-  airControlMultiplier: 0.8
-  maxAirSpeed: 150
-  airAcceleration: 8
-  animationThreshold: 0.1
-  animationSmoothTime: 0.05
-  groundCheck: {fileID: 1431709913}
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerController2D
+  moveSpeed: 300
+  runMultiplier: 1.5
+  jumpForce: 200
+  shortJumpMultiplier: 0.5
+  jumpCutMultiplier: 0.3
+  jumpCoyoteTime: 0.15
+  jumpBufferTime: 0.2
   groundCheckRadius: 0.2
   groundLayer:
     serializedVersion: 2
     m_Bits: 256
-  spriteRenderer: {fileID: 24014280}
-  animator: {fileID: 24014281}
-  jumpHoldForce: 25
-  maxJumpHoldTime: 1
+  groundCheckPoint: {fileID: 1431709913}
 --- !u!1 &105828888
 GameObject:
   m_ObjectHideFlags: 0
