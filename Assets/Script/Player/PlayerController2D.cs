@@ -14,6 +14,9 @@ public class PlayerController2D : MonoBehaviour
     [SerializeField] private float jumpCoyoteTime = 0.15f;
     [SerializeField] private float jumpBufferTime = 0.2f;
 
+    [Header("Air Control")]
+    [SerializeField] private float airDeceleration = 3f;
+
     [Header("Ground Check")]
     [SerializeField] private float groundCheckRadius = 0.2f;
     [SerializeField] private LayerMask groundLayer;
@@ -21,7 +24,7 @@ public class PlayerController2D : MonoBehaviour
 
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
-    private Animator animator;          // <-- новое
+    private Animator animator;
     private PlayerControls playerControls;
 
     private Vector2 moveInput;
@@ -34,7 +37,7 @@ public class PlayerController2D : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        rb.freezeRotation = true;       // фикс переворота из прошлого вопроса
+        rb.freezeRotation = true;
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         playerControls = new PlayerControls();
@@ -56,11 +59,9 @@ public class PlayerController2D : MonoBehaviour
         else
             lastGroundedTime -= Time.deltaTime;
 
+        // Сброс isJumping при приземлении
         if (isGrounded && isJumping)
-        {
             isJumping = false;
-            CancelInvoke(nameof(ResetJump));
-        }
 
         // Jump buffer
         if (playerControls.Player.Jump.WasPressedThisFrame())
@@ -83,7 +84,6 @@ public class PlayerController2D : MonoBehaviour
         if (moveInput.x != 0)
             spriteRenderer.flipX = moveInput.x < 0;
 
-        // --- Анимации ---
         UpdateAnimator();
     }
 
@@ -93,7 +93,22 @@ public class PlayerController2D : MonoBehaviour
         if (playerControls.Player.Run.IsPressed())
             currentSpeed *= runMultiplier;
 
-        rb.linearVelocity = new Vector2(moveInput.x * currentSpeed, rb.linearVelocity.y);
+        if (isGrounded)
+        {
+            rb.linearVelocity = new Vector2(moveInput.x * currentSpeed, rb.linearVelocity.y);
+        }
+        else
+        {
+            if (moveInput.x != 0)
+            {
+                rb.linearVelocity = new Vector2(moveInput.x * currentSpeed, rb.linearVelocity.y);
+            }
+            else
+            {
+                float dampedX = Mathf.MoveTowards(rb.linearVelocity.x, 0f, airDeceleration * Time.fixedDeltaTime);
+                rb.linearVelocity = new Vector2(dampedX, rb.linearVelocity.y);
+            }
+        }
     }
 
     private void UpdateAnimator()
@@ -112,13 +127,7 @@ public class PlayerController2D : MonoBehaviour
     {
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
         isJumping = true;
-        animator.SetTrigger("Jump");    // триггер JumpStart
-        Invoke(nameof(ResetJump), 0.1f);
-    }
-
-    private void ResetJump()
-    {
-        isJumping = false;
+        animator.SetTrigger("Jump");
     }
 
     private void OnDrawGizmosSelected()

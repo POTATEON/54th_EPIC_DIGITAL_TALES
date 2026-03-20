@@ -909,11 +909,11 @@ MonoBehaviour:
   target: {fileID: 24014277}
   followSmoothSpeed: 5
   offset: {x: 0, y: 0, z: -10}
-  useBounds: 1
-  minX: -4000
-  maxX: 10000
+  useBounds: 0
+  minX: 0
+  maxX: 0
   minY: 0
-  maxY: 10000
+  maxY: 0
 --- !u!1 &347883897
 GameObject:
   m_ObjectHideFlags: 0
