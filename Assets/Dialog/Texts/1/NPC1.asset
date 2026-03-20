@@ -10,17 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5a067972acd63604a9f355667470f22e, type: 3}
-  m_Name: 1
+  m_Name: NPC1
   m_EditorClassIdentifier: Assembly-CSharp::DialogueLine
-  text: "\u0432\u044B\u0431\u0438\u0440\u0430\u0439\n"
+  text: "\u041F\u0435\u0440\u0432\u0430\u044F \u0440\u0435\u043F\u043B\u0438\u043A\u0430
+    \u041D\u041F\u0421 \u0441 \u0432\u044B\u0431\u043E\u0440\u043E\u043C\n"
   speakerName: Boob
   speakerPortrait: {fileID: 5474691817298295274, guid: 572816ed9d4399c4799db8231dca0a8f, type: 3}
   choices:
-  - choiceText: "\u0441\u0438\u0441\u0438"
+  - choiceText: "\u041F\u0440\u0430\u0432\u0438\u043B\u044C\u043D\u044B\u0439 \u0432\u044B\u0431\u043E\u0440"
     correctResponse: {fileID: 11400000, guid: e37b48bd010058840b37401de16544d8, type: 2}
     wrongResponse: {fileID: 0}
     isCorrect: 1
-  - choiceText: "\u043F\u0438\u0441\u0438"
+  - choiceText: "\u041D\u0435\u043F\u0440\u0430\u0432\u0438\u043B\u044C\u043D\u044B\u0439
+      \u0432\u044B\u0431\u043E\u0440"
     correctResponse: {fileID: 0}
     wrongResponse: {fileID: 11400000, guid: 646a6f4f28f3c8c479233c0807df65ce, type: 2}
     isCorrect: 0

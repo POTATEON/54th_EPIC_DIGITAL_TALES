@@ -9,7 +9,7 @@ public class PlayerController2D : MonoBehaviour
 
     [Header("Jump Settings")]
     [SerializeField] private float jumpForce = 12f;
-    [SerializeField] private float shortJumpMultiplier = 0.5f;
+    //[SerializeField] private float shortJumpMultiplier = 0.5f;
     [SerializeField] private float jumpCutMultiplier = 0.3f;
     [SerializeField] private float jumpCoyoteTime = 0.15f;
     [SerializeField] private float jumpBufferTime = 0.2f;
