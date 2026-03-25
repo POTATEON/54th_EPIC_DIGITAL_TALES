@@ -8,6 +8,7 @@ public class GameMenu : MonoBehaviour
     public Button menuButton;
     public Button backButton;
     public Button menuSceneButton;
+    public Button restartButton;  // Новая кнопка "Заново"
 
     [Header("Panels")]
     public GameObject mainPanel;
@@ -22,6 +23,7 @@ public class GameMenu : MonoBehaviour
         menuButton.onClick.AddListener(OnMenuButtonClicked);
         backButton.onClick.AddListener(OnBackButtonClicked);
         menuSceneButton.onClick.AddListener(OnMenuSceneButtonClicked);
+        restartButton.onClick.AddListener(OnRestartButtonClicked);  // Добавляем слушатель
 
         _navigator.ShowPanel(mainPanel);
         UpdateMenuButton();
@@ -45,6 +47,13 @@ public class GameMenu : MonoBehaviour
     {
         Debug.Log("Кнопка MenuScene нажата");
         SceneManager.LoadScene("MainMenu");
+    }
+
+    void OnRestartButtonClicked()
+    {
+        Debug.Log("Кнопка Заново нажата");
+        // Перезагружаем текущую активную сцену
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     /// <summary>

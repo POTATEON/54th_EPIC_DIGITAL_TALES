@@ -9,7 +9,6 @@ public class PlayerController2D : MonoBehaviour
 
     [Header("Jump Settings")]
     [SerializeField] private float jumpForce = 12f;
-    //[SerializeField] private float shortJumpMultiplier = 0.5f;
     [SerializeField] private float jumpCutMultiplier = 0.3f;
     [SerializeField] private float jumpCoyoteTime = 0.15f;
     [SerializeField] private float jumpBufferTime = 0.2f;
@@ -34,6 +33,28 @@ public class PlayerController2D : MonoBehaviour
     private float lastJumpPressedTime;
     private bool isJumping;
 
+    // --- Блокировка движения (для системы боя) ---
+    private bool _isMovementLocked;
+
+    public bool IsMovementLocked => _isMovementLocked;
+
+    public void LockMovement()
+    {
+        _isMovementLocked = true;
+        // Гасим горизонтальную скорость чтобы игрок не скользил
+        if (rb != null)
+            rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
+        Debug.Log("[PlayerController2D] Движение заблокировано");
+    }
+
+    public void UnlockMovement()
+    {
+        _isMovementLocked = false;
+        Debug.Log("[PlayerController2D] Движение разблокировано");
+    }
+
+    // --- Стандартная логика (без изменений) ---
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -43,44 +64,45 @@ public class PlayerController2D : MonoBehaviour
         playerControls = new PlayerControls();
     }
 
-    private void OnEnable()  { playerControls.Player.Enable(); }
+    private void OnEnable() { playerControls.Player.Enable(); }
     private void OnDisable() { playerControls.Player.Disable(); }
 
     private void Update()
     {
+        // Если движение заблокировано — читаем инпут только для анимации idle
+        if (_isMovementLocked)
+        {
+            moveInput = Vector2.zero;
+            UpdateAnimator();
+            return;
+        }
+
         moveInput = playerControls.Player.Move.ReadValue<Vector2>();
 
-        // Земля
         isGrounded = Physics2D.OverlapCircle(groundCheckPoint.position, groundCheckRadius, groundLayer);
 
-        // Coyote Time
         if (isGrounded)
             lastGroundedTime = jumpCoyoteTime;
         else
             lastGroundedTime -= Time.deltaTime;
 
-        // Сброс isJumping при приземлении
         if (isGrounded && isJumping)
             isJumping = false;
 
-        // Jump buffer
         if (playerControls.Player.Jump.WasPressedThisFrame())
             lastJumpPressedTime = jumpBufferTime;
         else
             lastJumpPressedTime -= Time.deltaTime;
 
-        // Прыжок
         if (lastJumpPressedTime > 0 && lastGroundedTime > 0 && !isJumping)
         {
             Jump();
             lastJumpPressedTime = 0;
         }
 
-        // Короткий прыжок
         if (playerControls.Player.Jump.WasReleasedThisFrame() && rb.linearVelocity.y > 0)
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * jumpCutMultiplier);
 
-        // Поворот спрайта
         if (moveInput.x != 0)
             spriteRenderer.flipX = moveInput.x < 0;
 
@@ -89,6 +111,13 @@ public class PlayerController2D : MonoBehaviour
 
     private void FixedUpdate()
     {
+        // Если движение заблокировано — останавливаем горизонталь каждый FixedUpdate
+        if (_isMovementLocked)
+        {
+            rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
+            return;
+        }
+
         float currentSpeed = moveSpeed;
         if (playerControls.Player.Run.IsPressed())
             currentSpeed *= runMultiplier;
@@ -113,7 +142,7 @@ public class PlayerController2D : MonoBehaviour
 
     private void UpdateAnimator()
     {
-        bool isRunning = playerControls.Player.Run.IsPressed() && moveInput.x != 0;
+        bool isRunning = !_isMovementLocked && playerControls.Player.Run.IsPressed() && moveInput.x != 0;
         bool isWalking = moveInput.x != 0 && !isRunning;
 
         animator.SetBool("walkPressed", isWalking);

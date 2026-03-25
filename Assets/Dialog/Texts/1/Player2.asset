@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a067972acd63604a9f355667470f22e, type: 3}
   m_Name: Player2
   m_EditorClassIdentifier: Assembly-CSharp::DialogueLine
-  text: 'eeeeeeeeeeeee
-
-'
-  speakerName: Popa
-  speakerPortrait: {fileID: -6369807818364886571, guid: d01ac25448ebb8a4681f13a3bec30be7, type: 3}
+  text: "\u0421\u043F\u0430\u0441\u0438\u0431\u043E!"
+  speakerName: "\u0418\u0433\u0440\u043E\u043A"
+  speakerPortrait: {fileID: 4858846298431762650, guid: 8d0cdf48e8bc52642b4554986ad2ad34, type: 3}
+  choices: []

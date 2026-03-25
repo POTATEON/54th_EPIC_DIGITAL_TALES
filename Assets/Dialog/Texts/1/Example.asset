@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   lines:
   - {fileID: 11400000, guid: 70eca5982e8422c40afe03cccbe24d16, type: 2}
+  - {fileID: 11400000, guid: 5b1496d804ab1494695a5b9cafd36390, type: 2}
   - {fileID: 11400000, guid: 834141d2f14dd4448bf6963eaf430bdd, type: 2}
-  finalLine: {fileID: 11400000, guid: 5b1496d804ab1494695a5b9cafd36390, type: 2}
+  finalLine: {fileID: 11400000, guid: 9903990d8c206574a8cc495e5c39f073, type: 2}
   repeatPromptLine: {fileID: 11400000, guid: 77672f81c6fa46d46ac33a665a1923b5, type: 2}
   repeatChoiceText: "\u041F\u043E\u0432\u0442\u043E\u0440\u0438\u0442\u044C"
   skipChoiceText: "\u0412\u0441\u0451 \u043F\u043E\u043D\u044F\u043B, \u0441\u043F\u0430\u0441\u0438\u0431\u043E"

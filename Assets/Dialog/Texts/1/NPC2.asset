@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a067972acd63604a9f355667470f22e, type: 3}
+  m_Name: NPC2
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueLine
+  text: "\u0422\u044B \u043F\u043E\u043D\u044F\u043B \u0447\u0442\u043E \u0442\u0430\u043A\u043E\u0435
+    \u043B\u043E\u0433\u0430\u0440\u0438\u0444\u043C?"
+  speakerName: "\u0421\u0442\u0443\u0434\u0435\u043D\u0442"
+  speakerPortrait: {fileID: 5474691817298295274, guid: 572816ed9d4399c4799db8231dca0a8f, type: 3}
+  choices:
+  - choiceText: "\u0414\u0430"
+    correctResponse: {fileID: 11400000, guid: a7366fc7168089f4785df4f059ce0278, type: 2}
+    wrongResponse: {fileID: 0}
+    isCorrect: 1
+  - choiceText: "\u041D\u0435\u0442"
+    correctResponse: {fileID: 0}
+    wrongResponse: {fileID: 11400000, guid: 70e792c8fee133f4b9bfcb504ea97d7a, type: 2}
+    isCorrect: 0

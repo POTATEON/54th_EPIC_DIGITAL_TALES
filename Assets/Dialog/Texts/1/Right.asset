@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a067972acd63604a9f355667470f22e, type: 3}
   m_Name: Right
   m_EditorClassIdentifier: Assembly-CSharp::DialogueLine
-  text: "\u041C\u043E\u043B\u043E\u0434\u0435\u0446"
-  speakerName: Boob
-  speakerPortrait: {fileID: 0}
+  text: "\u041E\u0442\u043B\u0438\u0447\u043D\u043E!"
+  speakerName: NPC
+  speakerPortrait: {fileID: 5474691817298295274, guid: 572816ed9d4399c4799db8231dca0a8f, type: 3}
   choices: []

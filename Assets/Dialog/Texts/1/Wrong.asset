@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a067972acd63604a9f355667470f22e, type: 3}
   m_Name: Wrong
   m_EditorClassIdentifier: Assembly-CSharp::DialogueLine
-  text: "\u041D\u0415"
-  speakerName: Boob
-  speakerPortrait: {fileID: 0}
+  text: "\u0422\u043E\u0433\u0434\u0430 \u043F\u043E\u0440\u0430 \u043D\u0430\u0447\u0430\u0442\u044C!"
+  speakerName: "\u0421\u0442\u0443\u0434\u0435\u043D\u0442"
+  speakerPortrait: {fileID: 5474691817298295274, guid: 572816ed9d4399c4799db8231dca0a8f, type: 3}
   choices: []
