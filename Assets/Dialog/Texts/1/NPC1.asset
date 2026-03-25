@@ -21,7 +21,7 @@ MonoBehaviour:
     correctResponse: {fileID: 11400000, guid: e37b48bd010058840b37401de16544d8, type: 2}
     wrongResponse: {fileID: 0}
     isCorrect: 1
-  - choiceText: "\u041F\u0440\u0438\u043C\u0435\u0440"
+  - choiceText: "\u041D\u0435\u0442 \u0435\u0449\u0451"
     correctResponse: {fileID: 0}
     wrongResponse: {fileID: 11400000, guid: 646a6f4f28f3c8c479233c0807df65ce, type: 2}
     isCorrect: 0
