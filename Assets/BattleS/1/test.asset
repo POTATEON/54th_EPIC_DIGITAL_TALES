@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a56484e4a47da04c8ef7b83aa31c292, type: 3}
+  m_Name: test
+  m_EditorClassIdentifier: Assembly-CSharp::MathEnemyData
+  enemyName: "\u0412\u0440\u0430\u0433"
+  wrongAnswerDamage: 10
+  operations:
+  - expression: "log\u2081\u20801000 + log\u2081\u2080100 - log\u2081\u208010"
+    expectedInputs:
+    - "log\u2081\u2080(1000*100) - log\u2081\u2080(10)"
+    - "log\u2081\u2080100000 - log\u2081\u208010"
+    isFinal: 0
+    abilities:
+    - {fileID: 11400000, guid: 0dfa0b83af762a0488ef2d36d41e0159, type: 2}
+  - expression: "log\u2081\u2080100000 - log\u2081\u208010"
+    expectedInputs:
+    - "log\u2081\u2080(100000/10)"
+    - "log\u2081\u208010000"
+    isFinal: 0
+    abilities: []
+  - expression: "log\u2081\u208010000"
+    expectedInputs:
+    - 4
+    isFinal: 0
+    abilities: []
+  - expression: 4
+    expectedInputs:
+    - 4
+    isFinal: 1
+    abilities: []

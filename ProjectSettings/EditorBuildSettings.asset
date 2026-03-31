@@ -12,8 +12,17 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 4a27b5aa279e8cf4ba5b69a090501b09
   - enabled: 1
-    path: Assets/Scenes/GamePlay.unity
+    path: Assets/Scenes/Scene_01_Basics.unity
     guid: 419c60e9006e2fb4586d87f72da3d097
+  - enabled: 1
+    path: Assets/Scenes/Scene_02_Equations.unity
+    guid: 91b95a0531804434faeaa3f231ca34a4
+  - enabled: 1
+    path: Assets/Scenes/Scene_03_Inequalities.unity
+    guid: 132b37cc0fdc1014fa1748514524c6d1
+  - enabled: 1
+    path: Assets/Scenes/Scene_04_Applications.unity
+    guid: 82f8995c194b7fa4fa472928fb97b896
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

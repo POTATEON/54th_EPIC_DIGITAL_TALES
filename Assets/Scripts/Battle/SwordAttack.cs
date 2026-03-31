@@ -8,9 +8,17 @@ public class SwordAttack : MonoBehaviour
     [Header("Хитбокс меча")]
     [SerializeField] private GameObject swordHitbox;
 
+    [Header("Поворот меча")]
+    [SerializeField] private Transform playerTransform;
+    [SerializeField] private Vector3 hitboxOffsetRight = new Vector3(0.5f, 0f, 0f);
+    [SerializeField] private Vector3 hitboxOffsetLeft = new Vector3(-0.5f, 0f, 0f);
+    [SerializeField] private float hitboxRotationRight = 0f;
+    [SerializeField] private float hitboxRotationLeft = 180f;
+
     private Animator _animator;
     private PlayerControls _playerControls;
     private bool _isAttacking;
+    private SpriteRenderer _playerSprite;
 
     private void Awake()
     {
@@ -19,6 +27,11 @@ public class SwordAttack : MonoBehaviour
 
         if (swordHitbox != null)
             swordHitbox.SetActive(false);
+
+        if (playerTransform == null)
+            playerTransform = transform;
+
+        _playerSprite = playerTransform.GetComponent<SpriteRenderer>();
     }
 
     private void OnEnable() => _playerControls.Player.Enable();
@@ -40,11 +53,40 @@ public class SwordAttack : MonoBehaviour
             _animator.SetTrigger("Attack");
 
         if (swordHitbox != null)
+        {
+            UpdateHitboxDirection();
             swordHitbox.SetActive(true);
+        }
 
         DealDamageImmediate();
 
         Invoke(nameof(EndAttack), 0.3f);
+    }
+
+    private void UpdateHitboxDirection()
+    {
+        if (swordHitbox == null) return;
+
+        bool facingRight = true;
+
+        if (_playerSprite != null)
+            facingRight = !_playerSprite.flipX;
+        else
+            facingRight = playerTransform.localScale.x > 0;
+
+        // Меняем позицию
+        if (facingRight)
+        {
+            swordHitbox.transform.localPosition = hitboxOffsetRight;
+            swordHitbox.transform.localRotation = Quaternion.Euler(0, 0, hitboxRotationRight);
+        }
+        else
+        {
+            swordHitbox.transform.localPosition = hitboxOffsetLeft;
+            swordHitbox.transform.localRotation = Quaternion.Euler(0, 0, hitboxRotationLeft);
+        }
+
+        // Scale НЕ ТРОГАЕМ
     }
 
     private void DealDamageImmediate()
@@ -61,8 +103,6 @@ public class SwordAttack : MonoBehaviour
         var results = new Collider2D[10];
         int count = hitboxCollider.Overlap(new ContactFilter2D().NoFilter(), results);
 
-        Debug.Log($"[SwordAttack] DealDamageImmediate: найдено коллайдеров = {count}");
-
         for (int i = 0; i < count; i++)
         {
             var enemy = results[i].GetComponent<MathEnemy>();
@@ -74,9 +114,7 @@ public class SwordAttack : MonoBehaviour
                 continue;
             }
 
-            // HP бар обновляется внутри MathEnemy.TakeDamage → WorldSpaceHpBar
             bool died = enemy.TakeDamage(damage);
-            Debug.Log($"[SwordAttack] Удар! Урон={damage}, HP врага={enemy.CurrentHp}");
 
             if (died)
             {
@@ -101,7 +139,6 @@ public class SwordAttack : MonoBehaviour
         if (enemy == null || !enemy.IsMathSolved) return;
 
         bool died = enemy.TakeDamage(damage);
-        Debug.Log($"[SwordAttack] Удар (Enter)! Урон={damage}, HP врага={enemy.CurrentHp}");
 
         if (died)
             EndAttack();
