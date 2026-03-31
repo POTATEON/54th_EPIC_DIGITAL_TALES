@@ -234,7 +234,8 @@ public class BattleManager : MonoBehaviour
 
     private void ResolveFinalStep(MathOperation finalStep)
     {
-        if (!float.TryParse(finalStep.expression, out float hp))
+        if (!float.TryParse(finalStep.expression, System.Globalization.NumberStyles.Float, 
+            System.Globalization.CultureInfo.InvariantCulture, out float hp))
         {
             Debug.LogError($"[BattleManager] isFinal=true, но expression='{finalStep.expression}' не является числом!");
             return;

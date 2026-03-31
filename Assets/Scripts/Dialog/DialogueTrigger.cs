@@ -332,6 +332,12 @@ public class DialogueTrigger : MonoBehaviour
         }
     }
 
+        public void SetDialogueData(DialogueData newData)
+    {
+        dialogueData = newData;
+        _dialogueCompleted = false; // чтобы можно было начать заново
+    }
+
     private void OnTriggerExit2D(Collider2D other)
     {
         if (!other.CompareTag("Player")) return;

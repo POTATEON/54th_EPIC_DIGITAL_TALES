@@ -6,7 +6,7 @@ using TMPro;
 
 /// <summary>
 /// Калькулятор с экранной клавиатурой и системой кнопок-способностей (масок ввода).
-/// Режим sub/sup: все последующие цифры входят в один индекс.
+/// Режим sub/sup: все последующие цифры и точки входят в один индекс.
 /// Поддержка нескольких способностей подряд.
 /// Поддержка режимов: Normal, Equation, Inequality (определяется по имени сцены).
 /// </summary>
@@ -28,6 +28,10 @@ public class Calculator : MonoBehaviour
     [Header("Цифры")]
     [SerializeField] private Button btn0, btn1, btn2, btn3, btn4;
     [SerializeField] private Button btn5, btn6, btn7, btn8, btn9;
+
+    // ── Точка ───────────────────────────────────────────────────────
+    [Header("Точка")]
+    [SerializeField] private Button btnDot;
 
     // ── Операторы ───────────────────────────────────────────────────
     [Header("Операторы")]
@@ -68,6 +72,7 @@ public class Calculator : MonoBehaviour
         Equation,    // уравнения (показывает = и x)
         Inequality   // неравенства (показывает =, x, >, <, ≥, ≤)
     }
+    public static Calculator Instance { get; private set; }
 
     // ── Событие ─────────────────────────────────────────────────────
     public event System.Action<string> OnSubmit;
@@ -79,7 +84,7 @@ public class Calculator : MonoBehaviour
     private IndexMode _mode = IndexMode.None;
     private bool _inIndex = false;
     private CalculatorMode _currentMode = CalculatorMode.Normal;
-
+    
     // ── Режим маски ─────────────────────────────────────────────────
     private struct Segment
     {
@@ -101,11 +106,15 @@ public class Calculator : MonoBehaviour
     // ════════════════════════════════════════════════════════════════
     private void Awake()
     {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
+        
         BindAll();
-
-        // Определяем режим по имени сцены
         SetModeByScene();
-
         if (abilityButtonPrefab != null)
             abilityButtonPrefab.gameObject.SetActive(false);
         gameObject.SetActive(false);
@@ -461,12 +470,16 @@ public class Calculator : MonoBehaviour
     private void AppendValue(string value)
     {
         bool isDigit = char.IsDigit(value[0]);
+        bool isDot = (value == ".");
         bool isParen = (value == "(" || value == ")");
         bool isOperator = (value == "+" || value == "-" || value == "*" || value == "/" || value == "log");
 
+        // Цифра или точка — продолжаем индекс
+        bool keepsIndex = isDigit || isDot;
+
         Debug.Log($"[Calculator] AppendValue: value='{value}', mode={_mode}, inIndex={_inIndex}");
 
-        if (!isDigit || isParen)
+        if (!keepsIndex || isParen)
         {
             if (_inIndex)
             {
@@ -767,7 +780,6 @@ public class Calculator : MonoBehaviour
 
         return RenderRaw(display);
     }
-    
 
     private static string RenderRaw(string raw)
     {
@@ -780,7 +792,8 @@ public class Calculator : MonoBehaviour
                 string tag = raw[i] == '_' ? "sub" : "sup";
                 sb.Append('<').Append(tag).Append('>');
                 i++;
-                while (i < raw.Length && char.IsDigit(raw[i]))
+                // Собираем цифры и точки в индексе
+                while (i < raw.Length && (char.IsDigit(raw[i]) || raw[i] == '.'))
                 {
                     sb.Append(raw[i]);
                     i++;
@@ -807,6 +820,10 @@ public class Calculator : MonoBehaviour
         Bind(btn3, "3"); Bind(btn4, "4"); Bind(btn5, "5");
         Bind(btn6, "6"); Bind(btn7, "7"); Bind(btn8, "8");
         Bind(btn9, "9");
+
+        // Точка
+        if (btnDot != null)
+            btnDot.onClick.AddListener(() => AppendValue("."));
 
         // Операторы
         Bind(btnPlus, "+"); Bind(btnMinus, "-");
@@ -855,6 +872,7 @@ public class Calculator : MonoBehaviour
         yield return btn0; yield return btn1; yield return btn2;
         yield return btn3; yield return btn4; yield return btn5;
         yield return btn6; yield return btn7; yield return btn8; yield return btn9;
+        if (btnDot != null) yield return btnDot;
         yield return btnPlus; yield return btnMinus;
         yield return btnMul; yield return btnDiv;
         yield return btnLog; yield return btnLParen; yield return btnRParen;
