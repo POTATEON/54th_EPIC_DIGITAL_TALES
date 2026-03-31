@@ -9,12 +9,23 @@ public class MenuNavigation : MonoBehaviour
     public Button settingsButton;
     public Button exitButton;
     public Button backButton;
-    public Button logButton;
+
+    [Header("Кнопки уровней (4 сцены)")]
+    public Button scene1Button;  // Основы и свойства
+    public Button scene2Button;  // Уравнения
+    public Button scene3Button;  // Неравенства
+    public Button scene4Button;  // Применение в науках
 
     [Header("Panels")]
     public GameObject mainMenuPanel;
     public GameObject chaptersPanel;
     public GameObject settingsPanel;
+
+    [Header("Названия сцен")]
+    public string scene1Name = "Scene_01_Basics";
+    public string scene2Name = "Scene_02_Equations";
+    public string scene3Name = "Scene_03_Inequalities";
+    public string scene4Name = "Scene_04_Applications";
 
     private PanelNavigator _navigator;
 
@@ -26,7 +37,16 @@ public class MenuNavigation : MonoBehaviour
         settingsButton.onClick.AddListener(OnSettingsButtonClicked);
         exitButton.onClick.AddListener(OnExitButtonClicked);
         backButton.onClick.AddListener(OnBackButtonClicked);
-        logButton.onClick.AddListener(OnLogButtonClicked);
+
+        // Кнопки сцен
+        if (scene1Button != null)
+            scene1Button.onClick.AddListener(() => LoadScene(scene1Name));
+        if (scene2Button != null)
+            scene2Button.onClick.AddListener(() => LoadScene(scene2Name));
+        if (scene3Button != null)
+            scene3Button.onClick.AddListener(() => LoadScene(scene3Name));
+        if (scene4Button != null)
+            scene4Button.onClick.AddListener(() => LoadScene(scene4Name));
 
         _navigator.ShowPanel(mainMenuPanel);
         UpdateBackButton();
@@ -53,12 +73,6 @@ public class MenuNavigation : MonoBehaviour
         UpdateBackButton();
     }
 
-    void OnLogButtonClicked()
-    {
-        Debug.Log("Log нажата");
-        SceneManager.LoadScene("Gameplay");
-    }
-
     void OnExitButtonClicked()
     {
         Debug.Log("Exit нажата");
@@ -69,10 +83,15 @@ public class MenuNavigation : MonoBehaviour
 #endif
     }
 
+    void LoadScene(string sceneName)
+    {
+        Debug.Log($"Загрузка сцены: {sceneName}");
+        SceneManager.LoadScene(sceneName);
+    }
+
     void UpdateBackButton()
     {
         if (backButton == null) return;
-        // Скрываем кнопку Back на главном меню
         backButton.gameObject.SetActive(_navigator.Current != mainMenuPanel);
     }
 }

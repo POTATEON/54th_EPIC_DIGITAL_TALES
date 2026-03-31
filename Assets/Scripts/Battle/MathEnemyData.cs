@@ -17,12 +17,16 @@ public class MathEnemyData : ScriptableObject
 [System.Serializable]
 public class MathOperation
 {
-    [Tooltip("Выражение на этом шаге. Для финального шага — это число, оно станет HP врага")]
+    [Tooltip("Выражение, которое видно над врагом на этом шаге")]
     public string expression;
 
-    [Tooltip("ID способности которую нужно нажать")]
-    public string correctAbilityId;
+    [Tooltip("Допустимые варианты ввода (регистр и пробелы игнорируются)")]
+    public string[] expectedInputs;
 
     [Tooltip("Если true — expression парсится как число и становится HP врага")]
     public bool isFinal;
+
+    [Tooltip("Кнопки-способности (маски ввода) доступные на этом шаге.\n" +
+             "Оставь пустым — кнопок не будет, только голая клавиатура.")]
+    public List<AbilityTemplate> abilities = new();
 }

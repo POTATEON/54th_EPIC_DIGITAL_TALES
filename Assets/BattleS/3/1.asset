@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5a56484e4a47da04c8ef7b83aa31c292, type: 3}
-  m_Name: 2
+  m_Name: 1
   m_EditorClassIdentifier: Assembly-CSharp::MathEnemyData
   enemyName: "\u0412\u0440\u0430\u0433"
   wrongAnswerDamage: 10
   operations:
-  - expression: "log\u20828 + log\u20824"
-    correctAbilityId: sum
+  - expression: "log\u2082x > 3"
+    expectedInputs:
+    - x > 8
     isFinal: 0
-  - expression: "log\u208232"
-    correctAbilityId: run
-    isFinal: 0
-  - expression: 5
-    correctAbilityId: 
+    abilities: []
+  - expression: 8
+    expectedInputs: []
     isFinal: 1
+    abilities: []

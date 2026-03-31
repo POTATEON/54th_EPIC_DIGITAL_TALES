@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a56484e4a47da04c8ef7b83aa31c292, type: 3}
+  m_Name: 5
+  m_EditorClassIdentifier: Assembly-CSharp::MathEnemyData
+  enemyName: "\u0412\u0440\u0430\u0433"
+  wrongAnswerDamage: 10
+  operations:
+  - expression: "log\u20824 + log\u20828"
+    expectedInputs:
+    - "log\u2082(32)"
+    - "log\u2082(4*8)"
+    isFinal: 0
+    abilities:
+    - {fileID: 11400000, guid: 0dfa0b83af762a0488ef2d36d41e0159, type: 2}
+  - expression: "log\u208232"
+    expectedInputs:
+    - 5
+    isFinal: 0
+    abilities: []
+  - expression: 5
+    expectedInputs: []
+    isFinal: 1
+    abilities: []
