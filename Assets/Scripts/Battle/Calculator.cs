@@ -1,14 +1,17 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.InputSystem;
 
 /// <summary>
 /// Калькулятор с экранной клавиатурой и системой кнопок-способностей (масок ввода).
 /// Режим sub/sup: все последующие цифры и точки входят в один индекс.
 /// Поддержка нескольких способностей подряд.
 /// Поддержка режимов: Normal, Equation, Inequality (определяется по имени сцены).
+/// Поддержка многострочного ввода (системы уравнений/неравенств).
 /// </summary>
 public class Calculator : MonoBehaviour
 {
@@ -59,6 +62,10 @@ public class Calculator : MonoBehaviour
     [SerializeField] private Button btnClear;
     [SerializeField] private Button btnApply;
 
+    // ── Системы уравнений ───────────────────────────────────────────
+    [Header("Системы уравнений")]
+    [SerializeField] private Button btnAddLine;
+
     // ── Цвета ───────────────────────────────────────────────────────
     [Header("Цвета режимов")]
     [SerializeField] private Color subActiveColor = new Color(0.30f, 0.60f, 1.00f);
@@ -77,14 +84,15 @@ public class Calculator : MonoBehaviour
     // ── Событие ─────────────────────────────────────────────────────
     public event System.Action<string> OnSubmit;
 
-    // ── Свободный режим ─────────────────────────────────────────────
-    private readonly StringBuilder _raw = new StringBuilder();
+    // ── Многострочный ввод ─────────────────────────────────────────
+    private List<StringBuilder> _lines = new List<StringBuilder> { new StringBuilder() };
+    private int _currentLine = 0;
 
     private enum IndexMode { None, Sub, Sup }
     private IndexMode _mode = IndexMode.None;
     private bool _inIndex = false;
     private CalculatorMode _currentMode = CalculatorMode.Normal;
-    
+
     // ── Режим маски ─────────────────────────────────────────────────
     private struct Segment
     {
@@ -99,7 +107,6 @@ public class Calculator : MonoBehaviour
     private int _currentSlot = -1;
     private bool _maskActive = false;
     private int _filledSlotsCount = 0;
-    private string _pendingMaskResult = null;
 
     private readonly List<Button> _spawnedAbilityButtons = new();
 
@@ -112,12 +119,33 @@ public class Calculator : MonoBehaviour
             return;
         }
         Instance = this;
-        
+
         BindAll();
         SetModeByScene();
         if (abilityButtonPrefab != null)
             abilityButtonPrefab.gameObject.SetActive(false);
         gameObject.SetActive(false);
+    }
+
+    private void Update()
+    {
+        if (!gameObject.activeSelf) return;
+        if (_maskActive) return; // в режиме маски не переключаем строки
+
+        var keyboard = Keyboard.current;
+        if (keyboard == null) return;
+
+        // Навигация стрелками между строками
+        if (keyboard.upArrowKey.wasPressedThisFrame && _currentLine > 0)
+        {
+            _currentLine--;
+            RefreshDisplay();
+        }
+        else if (keyboard.downArrowKey.wasPressedThisFrame && _currentLine < _lines.Count - 1)
+        {
+            _currentLine++;
+            RefreshDisplay();
+        }
     }
 
     // ════════════════════════════════════════════════════════════════
@@ -179,6 +207,8 @@ public class Calculator : MonoBehaviour
             if (btn != null) btn.interactable = value;
         if (nextSlotButton != null)
             nextSlotButton.interactable = value;
+        if (btnAddLine != null)
+            btnAddLine.interactable = value;
     }
 
     public void Clear()
@@ -215,6 +245,26 @@ public class Calculator : MonoBehaviour
             btnLessEqual.gameObject.SetActive(mode == CalculatorMode.Inequality);
 
         Debug.Log($"[Calculator] Режим изменён на: {mode}");
+    }
+
+    /// <summary>
+    /// Добавляет новую строку для системы уравнений
+    /// </summary>
+    public void AddNewLine()
+    {
+        if (_maskActive) return;
+
+        // Не добавляем новую строку, если последняя уже пустая
+        if (_lines.Count > 0 && _lines[_lines.Count - 1].Length == 0)
+        {
+            Debug.Log("[Calculator] Последняя строка уже пустая, новая не добавлена");
+            return;
+        }
+
+        _lines.Add(new StringBuilder());
+        _currentLine = _lines.Count - 1;
+        RefreshDisplay();
+        Debug.Log($"[Calculator] Добавлена строка {_currentLine + 1}, всего строк: {_lines.Count}");
     }
 
     // ════════════════════════════════════════════════════════════════
@@ -262,16 +312,8 @@ public class Calculator : MonoBehaviour
 
     private void ActivateMask(AbilityTemplate template)
     {
-        // Если есть результат предыдущей маски, добавляем его в свободный режим
-        if (!string.IsNullOrEmpty(_pendingMaskResult))
-        {
-            _raw.Append(_pendingMaskResult);
-            _pendingMaskResult = null;
-            RefreshDisplay();
-        }
-
         ExitMask();
-        ClearFree();
+        // НЕ вызываем ClearFree() — сохраняем содержимое строк
 
         _segments = ParseTemplate(template.template);
         _maskActive = true;
@@ -282,7 +324,6 @@ public class Calculator : MonoBehaviour
             nextSlotButton.gameObject.SetActive(true);
 
         UpdateNextSlotButtonText();
-
         SetIndexMode(IndexMode.None);
         RefreshDisplay();
 
@@ -392,16 +433,18 @@ public class Calculator : MonoBehaviour
         }
         else
         {
-            // Все слоты заполнены — сохраняем результат маски
+            // Все слоты заполнены — завершаем маску
             string currentMaskResult = BuildMaskResult();
-            _pendingMaskResult = currentMaskResult;
             ExitMask();
 
-            // Добавляем результат в свободный режим для отображения
-            _raw.Append(currentMaskResult);
-            RefreshDisplay();
+            // Добавляем результат в ТЕКУЩУЮ строку
+            if (!string.IsNullOrEmpty(currentMaskResult))
+            {
+                _lines[_currentLine].Append(currentMaskResult);
+            }
 
-            Debug.Log($"[Calculator] Маска завершена, результат сохранён: {currentMaskResult}");
+            RefreshDisplay();
+            Debug.Log($"[Calculator] Маска завершена, результат: '{currentMaskResult}'");
         }
     }
 
@@ -470,27 +513,17 @@ public class Calculator : MonoBehaviour
     private void AppendValue(string value)
     {
         bool isDigit = char.IsDigit(value[0]);
-        bool isDot = (value == ".");
+        bool isDot = (value == "‚");
         bool isParen = (value == "(" || value == ")");
-        bool isOperator = (value == "+" || value == "-" || value == "*" || value == "/" || value == "log");
-
-        // Цифра или точка — продолжаем индекс
         bool keepsIndex = isDigit || isDot;
-
-        Debug.Log($"[Calculator] AppendValue: value='{value}', mode={_mode}, inIndex={_inIndex}");
 
         if (!keepsIndex || isParen)
         {
-            if (_inIndex)
-            {
-                Debug.Log($"[Calculator] Выход из индекса (символ: '{value}')");
-                _inIndex = false;
-            }
+            if (_inIndex) _inIndex = false;
         }
 
         if (isParen && _mode != IndexMode.None)
         {
-            Debug.Log($"[Calculator] Нажата скобка, выключаем режим {_mode}");
             SetIndexMode(IndexMode.None);
             _inIndex = false;
         }
@@ -527,47 +560,45 @@ public class Calculator : MonoBehaviour
         }
         else
         {
-            // Свободный режим
+            // Свободный режим — добавляем в текущую строку
+            var currentLineBuilder = _lines[_currentLine];
+
             if (_mode == IndexMode.Sub)
             {
                 if (!_inIndex)
                 {
-                    _raw.Append('_');
+                    currentLineBuilder.Append('_');
                     _inIndex = true;
                 }
-                _raw.Append(value);
+                currentLineBuilder.Append(value);
             }
             else if (_mode == IndexMode.Sup)
             {
                 if (!_inIndex)
                 {
-                    _raw.Append('^');
+                    currentLineBuilder.Append('^');
                     _inIndex = true;
                 }
-                _raw.Append(value);
+                currentLineBuilder.Append(value);
             }
             else
             {
-                _raw.Append(value);
+                currentLineBuilder.Append(value);
             }
         }
 
-        Debug.Log($"[Calculator] После ввода: raw='{_raw}'");
         RefreshDisplay();
     }
 
     private void Backspace()
     {
-        Debug.Log($"[Calculator] Backspace: raw='{_raw}', inIndex={_inIndex}");
-
         if (_maskActive && _currentSlot >= 0)
         {
             var val = _segments[_currentSlot].slotValue;
             if (val.Length == 0)
             {
                 int prev = FindPrevSlot(_currentSlot);
-                if (prev >= 0)
-                    _currentSlot = prev;
+                if (prev >= 0) _currentSlot = prev;
             }
             else if (val.Length >= 2 && (val[val.Length - 2] == '_' || val[val.Length - 2] == '^'))
             {
@@ -581,27 +612,49 @@ public class Calculator : MonoBehaviour
 
             UpdateFilledSlotsCount();
             UpdateNextSlotButtonText();
+            RefreshDisplay();
+            return;
+        }
+
+        // Свободный режим — удаляем из текущей строки
+        var currentLineBuilder = _lines[_currentLine];
+        if (currentLineBuilder.Length == 0) return;
+
+        if (currentLineBuilder.Length >= 2 &&
+            (currentLineBuilder[currentLineBuilder.Length - 2] == '_' ||
+             currentLineBuilder[currentLineBuilder.Length - 2] == '^'))
+        {
+            currentLineBuilder.Remove(currentLineBuilder.Length - 2, 2);
+            _inIndex = false;
+        }
+        else if (currentLineBuilder.Length >= 3 &&
+                 currentLineBuilder.ToString(currentLineBuilder.Length - 3, 3) == "log")
+        {
+            currentLineBuilder.Remove(currentLineBuilder.Length - 3, 3);
         }
         else
         {
-            if (_raw.Length == 0) return;
-            if (_raw.Length >= 2 && (_raw[_raw.Length - 2] == '_' || _raw[_raw.Length - 2] == '^'))
-            {
-                _raw.Remove(_raw.Length - 2, 2);
-                _inIndex = false;
-            }
-            else if (_raw.Length >= 3 && _raw.ToString(_raw.Length - 3, 3) == "log")
-                _raw.Remove(_raw.Length - 3, 3);
-            else
-                _raw.Remove(_raw.Length - 1, 1);
+            currentLineBuilder.Remove(currentLineBuilder.Length - 1, 1);
         }
+
+        // === НОВАЯ ЛОГИКА: удаляем пустую строку (если не последняя) ===
+        if (_lines[_currentLine].Length == 0 && _lines.Count > 1)
+        {
+            _lines.RemoveAt(_currentLine);
+            // Если удалили строку, которая была не последней, остаёмся на том же индексе
+            if (_currentLine >= _lines.Count)
+                _currentLine = _lines.Count - 1;
+        }
+
         RefreshDisplay();
     }
 
     private void ClearFree()
     {
-        _raw.Clear();
-        _pendingMaskResult = null;
+        // Очищаем все строки, оставляем одну пустую
+        _lines.Clear();
+        _lines.Add(new StringBuilder());
+        _currentLine = 0;
         _inIndex = false;
         SetIndexMode(IndexMode.None);
     }
@@ -618,8 +671,9 @@ public class Calculator : MonoBehaviour
         }
         else
         {
-            if (_raw.Length == 0) return;
-            result = _raw.ToString();
+            // Собираем все строки через ;
+            result = string.Join(";", _lines.Select(l => l.ToString()));
+            if (string.IsNullOrEmpty(result)) return;
             ClearFree();
         }
 
@@ -727,11 +781,27 @@ public class Calculator : MonoBehaviour
         if (_maskActive)
         {
             displayText.text = BuildMaskDisplay();
+            return;
         }
-        else
+
+        // Показываем все строки
+        var sb = new StringBuilder();
+        for (int i = 0; i < _lines.Count; i++)
         {
-            displayText.text = BuildFreeDisplay();
+            string lineContent = _lines[i].ToString();
+            if (string.IsNullOrEmpty(lineContent)) lineContent = "□";
+
+            // Отмечаем активную строку
+            if (i == _currentLine)
+                sb.Append("> ").Append(lineContent);
+            else
+                sb.Append("  ").Append(lineContent);
+
+            if (i != _lines.Count - 1)
+                sb.AppendLine();
         }
+
+        displayText.text = sb.ToString();
     }
 
     private string BuildMaskDisplay()
@@ -767,20 +837,6 @@ public class Calculator : MonoBehaviour
         return sb.ToString();
     }
 
-    private string BuildFreeDisplay()
-    {
-        if (_raw.Length == 0 && string.IsNullOrEmpty(_pendingMaskResult))
-            return string.Empty;
-
-        string display = _raw.ToString();
-        if (!string.IsNullOrEmpty(_pendingMaskResult))
-        {
-            display = _pendingMaskResult + display;
-        }
-
-        return RenderRaw(display);
-    }
-
     private static string RenderRaw(string raw)
     {
         var sb = new StringBuilder();
@@ -792,7 +848,6 @@ public class Calculator : MonoBehaviour
                 string tag = raw[i] == '_' ? "sub" : "sup";
                 sb.Append('<').Append(tag).Append('>');
                 i++;
-                // Собираем цифры и точки в индексе
                 while (i < raw.Length && (char.IsDigit(raw[i]) || raw[i] == '.'))
                 {
                     sb.Append(raw[i]);
@@ -854,6 +909,10 @@ public class Calculator : MonoBehaviour
         btnClear?.onClick.AddListener(() => { ExitMask(); ClearFree(); RefreshDisplay(); });
         btnApply?.onClick.AddListener(Submit);
 
+        // Системы уравнений
+        if (btnAddLine != null)
+            btnAddLine.onClick.AddListener(AddNewLine);
+
         if (nextSlotButton != null)
         {
             nextSlotButton.onClick.AddListener(MoveToNextSlot);
@@ -881,5 +940,6 @@ public class Calculator : MonoBehaviour
         yield return btnGreater; yield return btnLess;
         yield return btnGreaterEqual; yield return btnLessEqual;
         yield return btnBackspace; yield return btnClear; yield return btnApply;
+        if (btnAddLine != null) yield return btnAddLine;
     }
 }

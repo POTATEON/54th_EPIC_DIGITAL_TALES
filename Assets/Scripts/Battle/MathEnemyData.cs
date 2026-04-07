@@ -26,7 +26,13 @@ public class MathOperation
     [Tooltip("Если true — expression парсится как число и становится HP врага")]
     public bool isFinal;
 
-    [Tooltip("Кнопки-способности (маски ввода) доступные на этом шаге.\n" +
-             "Оставь пустым — кнопок не будет, только голая клавиатура.")]
+    [Tooltip("Кнопки-способности (маски ввода) доступные на этом шаге")]
     public List<AbilityTemplate> abilities = new();
+
+    // ===== НОВЫЕ ПОЛЯ ДЛЯ СИСТЕМ =====
+    [Tooltip("Если true — ответом является система уравнений/неравенств")]
+    public bool isSystem;
+
+    [Tooltip("Ожидаемые уравнения/неравенства системы (каждое отдельно)")]
+    public string[] expectedSystemInputs;
 }

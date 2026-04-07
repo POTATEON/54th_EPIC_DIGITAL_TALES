@@ -99,7 +99,20 @@ public class BattleManager : MonoBehaviour
         var step = _data.operations[_stepIndex];
         string normalized = NormalizeInput(rawInput);
 
-        if (IsCorrectInput(normalized, step))
+        bool isCorrect = false;
+
+        if (step.isSystem)
+        {
+            // Проверка системы уравнений
+            isCorrect = CheckSystemInput(normalized, step);
+        }
+        else
+        {
+            // Обычная проверка
+            isCorrect = IsCorrectInput(normalized, step);
+        }
+
+        if (isCorrect)
         {
             OnCorrectAnswer();
         }
@@ -108,6 +121,44 @@ public class BattleManager : MonoBehaviour
             OnWrongAnswer(rawInput, step);
         }
     }
+
+    /// <summary>
+    /// Проверка системы уравнений/неравенств
+    /// </summary>
+    private bool CheckSystemInput(string input, MathOperation step)
+    {
+        if (step.expectedSystemInputs == null || step.expectedSystemInputs.Length == 0)
+        {
+            Debug.LogWarning("[BattleManager] Система включена, но expectedSystemInputs пуст!");
+            return false;
+        }
+
+        // Разбиваем ввод игрока по разделителю ;
+        string[] parts = input.Split(';');
+
+        if (parts.Length != step.expectedSystemInputs.Length)
+        {
+            Debug.Log($"[BattleManager] Неверное количество уравнений. Ожидалось: {step.expectedSystemInputs.Length}, получено: {parts.Length}");
+            return false;
+        }
+
+        // Проверяем каждое уравнение
+        for (int i = 0; i < parts.Length; i++)
+        {
+            string partNormalized = NormalizeInput(parts[i]);
+            string expectedNormalized = NormalizeInput(step.expectedSystemInputs[i]);
+
+            if (partNormalized != expectedNormalized)
+            {
+                Debug.Log($"[BattleManager] Ошибка в уравнении {i + 1}. Ожидалось: '{step.expectedSystemInputs[i]}', получено: '{parts[i]}'");
+                return false;
+            }
+        }
+
+        Debug.Log("[BattleManager] Система решена верно!");
+        return true;
+    }
+
 
     /// <summary>
     /// Приводит ввод к единому формату для сравнения.

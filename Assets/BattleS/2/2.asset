@@ -18,6 +18,8 @@ MonoBehaviour:
   - expression: "log\u2082x + log\u20824 = 5"
     expectedInputs:
     - "log\u2082(4x) = 5"
+    - "log\u2082(4*x) = 5"
+    - "log\u2082(x*4) = 5"
     isFinal: 0
     abilities: []
   - expression: "log\u2082(4x) = 5"
