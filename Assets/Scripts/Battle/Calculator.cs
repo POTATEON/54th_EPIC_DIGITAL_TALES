@@ -661,34 +661,39 @@ public class Calculator : MonoBehaviour
         else
         {
             // Свободный режим — добавляем в текущую строку
+            // Свободный режим — добавляем в текущую строку
             var currentLineBuilder = _lines[_currentLine];
-            Debug.Log($"[DEBUG] Before append to line: line='{currentLineBuilder}'");
 
-            if (_mode == IndexMode.Sub)
+            if (_mode == IndexMode.Sub || _mode == IndexMode.Sup)
             {
-                if (!_inIndex)
+                // Если символ не продолжает индекс (не цифра и не точка)
+                if (!keepsIndex)
                 {
-                    currentLineBuilder.Append('_');
-                    _inIndex = true;
-                    Debug.Log($"[DEBUG] Added '_' prefix for sub mode to line");
+                    // Завершаем индекс
+                    _inIndex = false;
+                    // Добавляем символ без префикса
+                    currentLineBuilder.Append(value);
+                    // Выходим из режима индекса (кнопка перестанет гореть)
+                    SetIndexMode(IndexMode.None);
+                    Debug.Log($"[DEBUG] Выход из режима {_mode} из-за символа '{value}'");
                 }
-                currentLineBuilder.Append(value);
-            }
-            else if (_mode == IndexMode.Sup)
-            {
-                if (!_inIndex)
+                else
                 {
-                    currentLineBuilder.Append('^');
-                    _inIndex = true;
-                    Debug.Log($"[DEBUG] Added '^' prefix for sup mode to line");
+                    // Продолжаем индекс
+                    if (!_inIndex)
+                    {
+                        currentLineBuilder.Append(_mode == IndexMode.Sub ? '_' : '^');
+                        _inIndex = true;
+                        Debug.Log($"[DEBUG] Добавлен префикс {(_mode == IndexMode.Sub ? "_" : "^")} для {_mode} режима");
+                    }
+                    currentLineBuilder.Append(value);
                 }
-                currentLineBuilder.Append(value);
             }
             else
             {
                 currentLineBuilder.Append(value);
             }
-            
+
             Debug.Log($"[DEBUG] After append to line: line='{currentLineBuilder}'");
         }
 
@@ -842,12 +847,15 @@ public class Calculator : MonoBehaviour
 
     private void ToggleSup()
     {
-        Debug.Log($"[DEBUG] ToggleSup called, current _mode={_mode}");
-        
         if (_mode == IndexMode.Sup)
         {
+            // Если мы внутри ввода индекса (после ^ ещё не было оператора/скобки)
+            if (_inIndex)
+            {
+                Debug.Log("[Calculator] Сначала завершите ввод степени (оператор или скобка)");
+                return; // Не выключаем режим
+            }
             SetIndexMode(IndexMode.None);
-            _inIndex = false;
         }
         else
         {
