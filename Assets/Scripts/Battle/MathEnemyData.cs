@@ -35,4 +35,7 @@ public class MathOperation
 
     [Tooltip("Ожидаемые уравнения/неравенства системы (каждое отдельно)")]
     public string[] expectedSystemInputs;
+
+    [Tooltip("Обучающая подсказка для этого шага (опционально)")]
+    public TutorialHintData tutorialHint;
 }

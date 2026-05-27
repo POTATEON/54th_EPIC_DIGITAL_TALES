@@ -5,7 +5,7 @@ using TMPro;
 public class BattleManager : MonoBehaviour
 {
     public static BattleManager Instance { get; private set; }
-
+    public event System.Action<int> OnStepStarted;
     [Header("Battle Panel (скрывается только после смерти врага)")]
     [SerializeField] private GameObject battlePanel;
 
@@ -228,8 +228,10 @@ public class BattleManager : MonoBehaviour
 
     private void OnCorrectAnswer()
     {
-        Debug.Log($"[BattleManager] Правильный ответ на шаге {_stepIndex}");
+        TutorialHintManager.Instance?.HideHint();
 
+        Debug.Log($"[BattleManager] Правильный ответ на шаге {_stepIndex}");
+        calculator?.SetInteractable(false);
         // Блокируем ввод на момент перехода
         calculator?.SetInteractable(false);
 
@@ -276,9 +278,19 @@ public class BattleManager : MonoBehaviour
 
         _currentEnemy?.SetHpBarText(step.expression);
 
-        // Показываем калькулятор с подсказкой-выражением
         calculator?.Show(step.expression, step.abilities);
         calculator?.SetInteractable(true);
+
+        // 👇 ДОБАВЬТЕ ЭТОТ ЛОГ
+        Debug.Log($"[DEBUG] ShowCurrentStep: tutorialHint = {(step.tutorialHint != null ? step.tutorialHint.name : "NULL")}");
+
+        if (step.tutorialHint != null)
+        {
+            Debug.Log($"[DEBUG] Calling TutorialHintManager.ShowHint for '{step.tutorialHint.targetAbilityId}'");
+            TutorialHintManager.Instance?.ShowHint(step.tutorialHint);
+        }
+
+        OnStepStarted?.Invoke(_stepIndex);
 
         Debug.Log($"[BattleManager] Шаг {_stepIndex}: '{step.expression}'");
     }
