@@ -22,19 +22,31 @@ MonoBehaviour:
     isFinal: 0
     abilities:
     - {fileID: 11400000, guid: 0dfa0b83af762a0488ef2d36d41e0159, type: 2}
+    isSystem: 0
+    expectedSystemInputs: []
+    tutorialHint: {fileID: 11400000, guid: f58c60fc948eccc44b5d4ea6dae77880, type: 2}
   - expression: "log\u2081\u2080100000 - log\u2081\u208010"
     expectedInputs:
     - "log\u2081\u2080(100000/10)"
     - "log\u2081\u208010000"
     isFinal: 0
     abilities: []
+    isSystem: 0
+    expectedSystemInputs: []
+    tutorialHint: {fileID: 0}
   - expression: "log\u2081\u208010000"
     expectedInputs:
     - 4
     isFinal: 0
     abilities: []
+    isSystem: 0
+    expectedSystemInputs: []
+    tutorialHint: {fileID: 0}
   - expression: 4
     expectedInputs:
     - 4
     isFinal: 1
     abilities: []
+    isSystem: 0
+    expectedSystemInputs: []
+    tutorialHint: {fileID: 0}

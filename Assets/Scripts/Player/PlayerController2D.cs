@@ -1,12 +1,14 @@
 ﻿using UnityEngine;
 using UnityEngine.InputSystem;
-
+using UnityEngine.UIElements;
+using UnityEngine.UI;
 public class PlayerController2D : MonoBehaviour
 {
     [Header("Movement Settings")]
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private float runMultiplier = 1.5f;
-
+    [SerializeField] private Joystick mobileJoystick;
+    [SerializeField] private UnityEngine.UI.Button jumpButton;
     [Header("Jump Settings")]
     [SerializeField] private float jumpForce = 12f;
     [SerializeField] private float jumpCutMultiplier = 0.3f;
@@ -64,6 +66,28 @@ public class PlayerController2D : MonoBehaviour
         playerControls = new PlayerControls();
     }
 
+    private void Start()
+    {
+        // ... ваш существующий код ...
+
+        // Скрываем мобильные элементы на ПК
+        bool isMobile = true;
+
+        if (mobileJoystick != null)
+            mobileJoystick.gameObject.SetActive(isMobile);
+
+        if (jumpButton != null)
+            jumpButton.gameObject.SetActive(isMobile);
+
+        // Если это мобила — подключаем кнопки
+        if (isMobile)
+        {
+            if (jumpButton != null)
+                jumpButton.onClick.AddListener(OnJumpButtonPressed);
+        }
+    }
+
+
     private void OnEnable() { playerControls.Player.Enable(); }
     private void OnDisable() { playerControls.Player.Disable(); }
 
@@ -77,7 +101,17 @@ public class PlayerController2D : MonoBehaviour
             return;
         }
 
-        moveInput = playerControls.Player.Move.ReadValue<Vector2>();
+
+        if (mobileJoystick != null && mobileJoystick.Horizontal != 0 || mobileJoystick.Vertical != 0)
+        {
+            // На телефоне — используем джойстик
+            moveInput = new Vector2(mobileJoystick.Horizontal, mobileJoystick.Vertical);
+        }
+        else
+        {
+            // На ПК — используем клавиатуру
+            moveInput = playerControls.Player.Move.ReadValue<Vector2>();
+        }
 
         isGrounded = Physics2D.OverlapCircle(groundCheckPoint.position, groundCheckRadius, groundLayer);
 
@@ -166,5 +200,15 @@ public class PlayerController2D : MonoBehaviour
             Gizmos.color = Color.red;
             Gizmos.DrawWireSphere(groundCheckPoint.position, groundCheckRadius);
         }
+    }
+
+    public void OnJumpButtonPressed()
+    {
+        if (_isMovementLocked) return;
+
+        // Эмулируем нажатие прыжка
+        lastJumpPressedTime = jumpBufferTime;
+
+        Debug.Log("[PlayerController2D] Кнопка прыжка нажата");
     }
 }

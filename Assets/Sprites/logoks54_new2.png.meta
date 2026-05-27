@@ -1,0 +1,1183 @@
+fileFormatVersion: 2
+guid: 4b684e24a965e98429311b28336078fc
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7781902234315573968
+    second: logoks54_new2_0
+  - first:
+      213: -8300500887174068708
+    second: logoks54_new2_1
+  - first:
+      213: -3149436316343908491
+    second: logoks54_new2_2
+  - first:
+      213: -3178777849330650212
+    second: logoks54_new2_3
+  - first:
+      213: -2907935251738263919
+    second: logoks54_new2_4
+  - first:
+      213: -2613191418200290318
+    second: logoks54_new2_5
+  - first:
+      213: 5716398918946092772
+    second: logoks54_new2_6
+  - first:
+      213: -3965099711984313040
+    second: logoks54_new2_7
+  - first:
+      213: 4079975531337640869
+    second: logoks54_new2_8
+  - first:
+      213: 500234128775216344
+    second: logoks54_new2_9
+  - first:
+      213: -257741526544344628
+    second: logoks54_new2_10
+  - first:
+      213: 151097350454866310
+    second: logoks54_new2_11
+  - first:
+      213: -5932525643483109201
+    second: logoks54_new2_12
+  - first:
+      213: 7852438919612540378
+    second: logoks54_new2_13
+  - first:
+      213: -7240987370572857349
+    second: logoks54_new2_14
+  - first:
+      213: -6061072990343078408
+    second: logoks54_new2_15
+  - first:
+      213: -2800625397698604857
+    second: logoks54_new2_16
+  - first:
+      213: -8487188135043979842
+    second: logoks54_new2_17
+  - first:
+      213: -8807768375272629296
+    second: logoks54_new2_18
+  - first:
+      213: -108371497207208971
+    second: logoks54_new2_19
+  - first:
+      213: 43785764979278998
+    second: logoks54_new2_20
+  - first:
+      213: 6810678652969929164
+    second: logoks54_new2_21
+  - first:
+      213: -1387058870293112505
+    second: logoks54_new2_22
+  - first:
+      213: 2302230469269349557
+    second: logoks54_new2_23
+  - first:
+      213: 6451892455657311657
+    second: logoks54_new2_24
+  - first:
+      213: 2330057401343992156
+    second: logoks54_new2_25
+  - first:
+      213: -80477272118434382
+    second: logoks54_new2_26
+  - first:
+      213: -8364764780436363347
+    second: logoks54_new2_27
+  - first:
+      213: -4564749971430880701
+    second: logoks54_new2_28
+  - first:
+      213: -2019514842390601853
+    second: logoks54_new2_29
+  - first:
+      213: 1798312139931957815
+    second: logoks54_new2_30
+  - first:
+      213: 7601761543376829599
+    second: logoks54_new2_31
+  - first:
+      213: 3286150225861817223
+    second: logoks54_new2_32
+  - first:
+      213: -4990989351484355732
+    second: logoks54_new2_33
+  - first:
+      213: -8711310485686910778
+    second: logoks54_new2_34
+  - first:
+      213: 3384003114292914499
+    second: logoks54_new2_35
+  - first:
+      213: -1831329357209062763
+    second: logoks54_new2_36
+  - first:
+      213: 5994245858773843654
+    second: logoks54_new2_37
+  - first:
+      213: 5011545799795644781
+    second: logoks54_new2_38
+  - first:
+      213: 8651774661195614140
+    second: logoks54_new2_39
+  - first:
+      213: -4760133862775023519
+    second: logoks54_new2_40
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: logoks54_new2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 328
+        height: 498
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0353dcee521210490800000000000000
+      internalID: -7781902234315573968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logoks54_new2_1
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 463
+        width: 80
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c16cc2acb62becc80800000000000000
+      internalID: -8300500887174068708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logoks54_new2_2
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 400
+        width: 37
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5774b915b54fa44d0800000000000000
+      internalID: -3149436316343908491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logoks54_new2_3
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 0
+        width: 272
+        height: 442
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9334ce4366b2e3d0800000000000000
+      internalID: -3178777849330650212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logoks54_new2_4
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 0
+        width: 292
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19efd42ab40f4a7d0800000000000000
+      internalID: -2907935251738263919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logoks54_new2_5
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 215
+        width: 295
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fb821c10441cbbd0800000000000000
+      internalID: -2613191418200290318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logoks54_new2_6
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 255
+        width: 133
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e6753ea78ab45f40800000000000000
+      internalID: 5716398918946092772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logoks54_new2_7
+      rect:
+        serializedVersion: 2
+        x: 844
+        y: 251
+        width: 119
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03ddb28e1d229f8c0800000000000000
+      internalID: -3965099711984313040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logoks54_new2_8
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 252
+        width: 114
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ab6aad012cfe9830800000000000000
+      internalID: 4079975531337640869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logoks54_new2_9
+      rect:
+        serializedVersion: 2
+        x: 1084
+        y: 252
+        width: 114
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8dc7c2e2a4031f600800000000000000
+      internalID: 500234128775216344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logoks54_new2_10
+      rect:
+        serializedVersion: 2
+        x: 1210
+        y: 251
+        width: 114
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc9157a72715c6cf0800000000000000
+      internalID: -257741526544344628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logoks54_new2_11
+      rect:
+        serializedVersion: 2
+        x: 1322
+        y: 215
+        width: 289
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6817d5c5d3ec81200800000000000000
+      internalID: 151097350454866310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logoks54_new2_12
+      rect:
+        serializedVersion: 2
+        x: 1659
+        y: 251
+        width: 102
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa82b4feb5f6bada0800000000000000
+      internalID: -5932525643483109201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logoks54_new2_13
+      rect:
+        serializedVersion: 2
+        x: 1767
+        y: 255
+        width: 106
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad525f7e79779fc60800000000000000
+      internalID: 7852438919612540378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logoks54_new2_14
+      rect:
+        serializedVersion: 2
+        x: 1873
+        y: 255
+        width: 114
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bff3ae1d958d28b90800000000000000
+      internalID: -7240987370572857349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logoks54_new2_15
+      rect:
+        serializedVersion: 2
+        x: 1994
+        y: 251
+        width: 105
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fdd2ec6a3eb2eba0800000000000000
+      internalID: -6061072990343078408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logoks54_new2_16
+      rect:
+        serializedVersion: 2
+        x: 2112
+        y: 255
+        width: 108
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c0dc350a0e2229d0800000000000000
+      internalID: -2800625397698604857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logoks54_new2_17
+      rect:
+        serializedVersion: 2
+        x: 2285
+        y: 255
+        width: 122
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb52bc4bb53773a80800000000000000
+      internalID: -8487188135043979842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logoks54_new2_18
+      rect:
+        serializedVersion: 2
+        x: 2416
+        y: 317
+        width: 98
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0db94f7045584c580800000000000000
+      internalID: -8807768375272629296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logoks54_new2_19
+      rect:
+        serializedVersion: 2
+        x: 2519
+        y: 251
+        width: 114
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f3ef2d82bcfe7ef0800000000000000
+      internalID: -108371497207208971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logoks54_new2_20
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 255
+        width: 119
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6940fc7dbee8b9000800000000000000
+      internalID: 43785764979278998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logoks54_new2_21
+      rect:
+        serializedVersion: 2
+        x: 2416
+        y: 255
+        width: 98
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc9cb9d7624648e50800000000000000
+      internalID: 6810678652969929164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logoks54_new2_22
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 73
+        width: 61
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 749df917e4d20cce0800000000000000
+      internalID: -1387058870293112505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logoks54_new2_23
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 73
+        width: 80
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b461eff96a23ff10800000000000000
+      internalID: 2302230469269349557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logoks54_new2_24
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 71
+        width: 65
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ad0a7c310ab98950800000000000000
+      internalID: 6451892455657311657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logoks54_new2_25
+      rect:
+        serializedVersion: 2
+        x: 953
+        y: 73
+        width: 61
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c51e0618cd6065020800000000000000
+      internalID: 2330057401343992156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logoks54_new2_26
+      rect:
+        serializedVersion: 2
+        x: 1030
+        y: 73
+        width: 61
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b563eee85612eef0800000000000000
+      internalID: -80477272118434382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logoks54_new2_27
+      rect:
+        serializedVersion: 2
+        x: 1139
+        y: 73
+        width: 71
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da7646820c26aeb80800000000000000
+      internalID: -8364764780436363347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logoks54_new2_28
+      rect:
+        serializedVersion: 2
+        x: 1222
+        y: 71
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34a43680610c6a0c0800000000000000
+      internalID: -4564749971430880701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logoks54_new2_29
+      rect:
+        serializedVersion: 2
+        x: 1256
+        y: 73
+        width: 94
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38fdda063fd39f3e0800000000000000
+      internalID: -2019514842390601853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logoks54_new2_30
+      rect:
+        serializedVersion: 2
+        x: 1358
+        y: 71
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73abae70d53e4f810800000000000000
+      internalID: 1798312139931957815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logoks54_new2_31
+      rect:
+        serializedVersion: 2
+        x: 1395
+        y: 73
+        width: 69
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9c733c09d1ee7960800000000000000
+      internalID: 7601761543376829599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logoks54_new2_32
+      rect:
+        serializedVersion: 2
+        x: 1471
+        y: 71
+        width: 68
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 783301b3830ca9d20800000000000000
+      internalID: 3286150225861817223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logoks54_new2_33
+      rect:
+        serializedVersion: 2
+        x: 1548
+        y: 71
+        width: 58
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6b8403d0a17cbab0800000000000000
+      internalID: -4990989351484355732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logoks54_new2_34
+      rect:
+        serializedVersion: 2
+        x: 1605
+        y: 73
+        width: 64
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c00f7c84453b1780800000000000000
+      internalID: -8711310485686910778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logoks54_new2_35
+      rect:
+        serializedVersion: 2
+        x: 1674
+        y: 42
+        width: 65
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 349ae3a37e466fe20800000000000000
+      internalID: 3384003114292914499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logoks54_new2_36
+      rect:
+        serializedVersion: 2
+        x: 1742
+        y: 42
+        width: 69
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5923fc407afc596e0800000000000000
+      internalID: -1831329357209062763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logoks54_new2_37
+      rect:
+        serializedVersion: 2
+        x: 1808
+        y: 73
+        width: 70
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ce329489d6df2350800000000000000
+      internalID: 5994245858773843654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logoks54_new2_38
+      rect:
+        serializedVersion: 2
+        x: 1884
+        y: 73
+        width: 61
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d699b644a569c8540800000000000000
+      internalID: 5011545799795644781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logoks54_new2_39
+      rect:
+        serializedVersion: 2
+        x: 1961
+        y: 73
+        width: 61
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb74a4d1737411870800000000000000
+      internalID: 8651774661195614140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logoks54_new2_40
+      rect:
+        serializedVersion: 2
+        x: 2033
+        y: 71
+        width: 65
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1689cf9d87b90fdb0800000000000000
+      internalID: -4760133862775023519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      logoks54_new2_0: -7781902234315573968
+      logoks54_new2_1: -8300500887174068708
+      logoks54_new2_10: -257741526544344628
+      logoks54_new2_11: 151097350454866310
+      logoks54_new2_12: -5932525643483109201
+      logoks54_new2_13: 7852438919612540378
+      logoks54_new2_14: -7240987370572857349
+      logoks54_new2_15: -6061072990343078408
+      logoks54_new2_16: -2800625397698604857
+      logoks54_new2_17: -8487188135043979842
+      logoks54_new2_18: -8807768375272629296
+      logoks54_new2_19: -108371497207208971
+      logoks54_new2_2: -3149436316343908491
+      logoks54_new2_20: 43785764979278998
+      logoks54_new2_21: 6810678652969929164
+      logoks54_new2_22: -1387058870293112505
+      logoks54_new2_23: 2302230469269349557
+      logoks54_new2_24: 6451892455657311657
+      logoks54_new2_25: 2330057401343992156
+      logoks54_new2_26: -80477272118434382
+      logoks54_new2_27: -8364764780436363347
+      logoks54_new2_28: -4564749971430880701
+      logoks54_new2_29: -2019514842390601853
+      logoks54_new2_3: -3178777849330650212
+      logoks54_new2_30: 1798312139931957815
+      logoks54_new2_31: 7601761543376829599
+      logoks54_new2_32: 3286150225861817223
+      logoks54_new2_33: -4990989351484355732
+      logoks54_new2_34: -8711310485686910778
+      logoks54_new2_35: 3384003114292914499
+      logoks54_new2_36: -1831329357209062763
+      logoks54_new2_37: 5994245858773843654
+      logoks54_new2_38: 5011545799795644781
+      logoks54_new2_39: 8651774661195614140
+      logoks54_new2_4: -2907935251738263919
+      logoks54_new2_40: -4760133862775023519
+      logoks54_new2_5: -2613191418200290318
+      logoks54_new2_6: 5716398918946092772
+      logoks54_new2_7: -3965099711984313040
+      logoks54_new2_8: 4079975531337640869
+      logoks54_new2_9: 500234128775216344
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

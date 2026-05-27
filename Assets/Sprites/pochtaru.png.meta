@@ -1,0 +1,3133 @@
+fileFormatVersion: 2
+guid: 017a6446cb4f0eb40b4f3dc13fb653ea
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5698791467052553630
+    second: pochtaru_0
+  - first:
+      213: -4170208121182719048
+    second: pochtaru_1
+  - first:
+      213: 3598133294167347181
+    second: pochtaru_2
+  - first:
+      213: -2302650579792561541
+    second: pochtaru_3
+  - first:
+      213: 824098255645899889
+    second: pochtaru_4
+  - first:
+      213: -6013436374486449692
+    second: pochtaru_5
+  - first:
+      213: -1407615590696516983
+    second: pochtaru_6
+  - first:
+      213: -1339042397914045407
+    second: pochtaru_7
+  - first:
+      213: 3424200625395630911
+    second: pochtaru_8
+  - first:
+      213: -2420496204833906839
+    second: pochtaru_9
+  - first:
+      213: -4470744491508408931
+    second: pochtaru_10
+  - first:
+      213: -8425936187871229441
+    second: pochtaru_11
+  - first:
+      213: -1848250823746368964
+    second: pochtaru_12
+  - first:
+      213: 6384363266867643398
+    second: pochtaru_13
+  - first:
+      213: 9107733146140898353
+    second: pochtaru_14
+  - first:
+      213: -706409620788031084
+    second: pochtaru_15
+  - first:
+      213: -7748545878674846482
+    second: pochtaru_16
+  - first:
+      213: 7868957497610723030
+    second: pochtaru_17
+  - first:
+      213: 2594019142677954215
+    second: pochtaru_18
+  - first:
+      213: -3541873801017415231
+    second: pochtaru_19
+  - first:
+      213: -2982675085437905039
+    second: pochtaru_20
+  - first:
+      213: 4529834617406429711
+    second: pochtaru_21
+  - first:
+      213: 6821654629902916079
+    second: pochtaru_22
+  - first:
+      213: 686050858305076447
+    second: pochtaru_23
+  - first:
+      213: -5962043063904808502
+    second: pochtaru_24
+  - first:
+      213: 2938910459475447690
+    second: pochtaru_25
+  - first:
+      213: 3694635659305115248
+    second: pochtaru_26
+  - first:
+      213: 8907294253854589126
+    second: pochtaru_27
+  - first:
+      213: -2034198974442826824
+    second: pochtaru_28
+  - first:
+      213: -1900241928608530525
+    second: pochtaru_29
+  - first:
+      213: -303697881135973221
+    second: pochtaru_30
+  - first:
+      213: -7697411975394460523
+    second: pochtaru_31
+  - first:
+      213: -5886735549414676216
+    second: pochtaru_32
+  - first:
+      213: 146730561202065939
+    second: pochtaru_33
+  - first:
+      213: 1360519843814023343
+    second: pochtaru_34
+  - first:
+      213: 8432696349840465026
+    second: pochtaru_35
+  - first:
+      213: 7629065993082019281
+    second: pochtaru_36
+  - first:
+      213: 8566319080299910853
+    second: pochtaru_37
+  - first:
+      213: 6778417860856134791
+    second: pochtaru_38
+  - first:
+      213: -5289358624442958037
+    second: pochtaru_39
+  - first:
+      213: 7130953020351440180
+    second: pochtaru_40
+  - first:
+      213: -8670522403915570424
+    second: pochtaru_41
+  - first:
+      213: -7527578192259247659
+    second: pochtaru_42
+  - first:
+      213: 4704824066986343944
+    second: pochtaru_43
+  - first:
+      213: 7273168843840804197
+    second: pochtaru_44
+  - first:
+      213: 611550302673894297
+    second: pochtaru_45
+  - first:
+      213: 4242528983100013398
+    second: pochtaru_46
+  - first:
+      213: -2216768490133168658
+    second: pochtaru_47
+  - first:
+      213: 3128704675832025275
+    second: pochtaru_48
+  - first:
+      213: -1240538618264793891
+    second: pochtaru_49
+  - first:
+      213: -3806772014023443030
+    second: pochtaru_50
+  - first:
+      213: 2003661738932623150
+    second: pochtaru_51
+  - first:
+      213: 5859578230046848993
+    second: pochtaru_52
+  - first:
+      213: -4867753373741907414
+    second: pochtaru_53
+  - first:
+      213: 7615780543514742269
+    second: pochtaru_54
+  - first:
+      213: 3712361295523707852
+    second: pochtaru_55
+  - first:
+      213: -1126684851980757161
+    second: pochtaru_56
+  - first:
+      213: -8751976361269890535
+    second: pochtaru_57
+  - first:
+      213: -6346922420278484942
+    second: pochtaru_58
+  - first:
+      213: 6605676801095208160
+    second: pochtaru_59
+  - first:
+      213: 1904678723380817261
+    second: pochtaru_60
+  - first:
+      213: -3506134416141190015
+    second: pochtaru_61
+  - first:
+      213: -3439455394862486400
+    second: pochtaru_62
+  - first:
+      213: 6525339606622772479
+    second: pochtaru_63
+  - first:
+      213: 1474615549389773344
+    second: pochtaru_64
+  - first:
+      213: -5631722631867002537
+    second: pochtaru_65
+  - first:
+      213: 5913122625718029101
+    second: pochtaru_66
+  - first:
+      213: -2729724833332231018
+    second: pochtaru_67
+  - first:
+      213: -8046849195109194241
+    second: pochtaru_68
+  - first:
+      213: -4272078686822366562
+    second: pochtaru_69
+  - first:
+      213: 3418060877575218859
+    second: pochtaru_70
+  - first:
+      213: 1597083579851811550
+    second: pochtaru_71
+  - first:
+      213: 5971170861105968948
+    second: pochtaru_72
+  - first:
+      213: 7766442954890472732
+    second: pochtaru_73
+  - first:
+      213: 7176085585925510089
+    second: pochtaru_74
+  - first:
+      213: -149976316784948561
+    second: pochtaru_75
+  - first:
+      213: -7866429460174861329
+    second: pochtaru_76
+  - first:
+      213: 7511925054525497707
+    second: pochtaru_77
+  - first:
+      213: 3702824276535325912
+    second: pochtaru_78
+  - first:
+      213: 3971241822715152856
+    second: pochtaru_79
+  - first:
+      213: -16073058817121835
+    second: pochtaru_80
+  - first:
+      213: 7144321727830123787
+    second: pochtaru_81
+  - first:
+      213: -2833198565568824983
+    second: pochtaru_82
+  - first:
+      213: 1804044137841468877
+    second: pochtaru_83
+  - first:
+      213: -7196760116410363666
+    second: pochtaru_84
+  - first:
+      213: -3987764283334995764
+    second: pochtaru_85
+  - first:
+      213: 4993299741126576070
+    second: pochtaru_86
+  - first:
+      213: 8913443689112522075
+    second: pochtaru_87
+  - first:
+      213: 6817798938835044762
+    second: pochtaru_88
+  - first:
+      213: -655111844579638433
+    second: pochtaru_89
+  - first:
+      213: -2332786676290617589
+    second: pochtaru_90
+  - first:
+      213: 6376019262125346960
+    second: pochtaru_91
+  - first:
+      213: 3961418745203373671
+    second: pochtaru_92
+  - first:
+      213: -1603181444364709854
+    second: pochtaru_93
+  - first:
+      213: 1856236878069383125
+    second: pochtaru_94
+  - first:
+      213: 1589439971302336837
+    second: pochtaru_95
+  - first:
+      213: -703780764292161555
+    second: pochtaru_96
+  - first:
+      213: 1169038438661037199
+    second: pochtaru_97
+  - first:
+      213: 5705272591724005465
+    second: pochtaru_98
+  - first:
+      213: 1311616375015097025
+    second: pochtaru_99
+  - first:
+      213: 7024678293288470736
+    second: pochtaru_100
+  - first:
+      213: -2150161849226949842
+    second: pochtaru_101
+  - first:
+      213: 6533526960387770294
+    second: pochtaru_102
+  - first:
+      213: 991140860199741887
+    second: pochtaru_103
+  - first:
+      213: -3848234041779290133
+    second: pochtaru_104
+  - first:
+      213: 2133440761321975794
+    second: pochtaru_105
+  - first:
+      213: -3654484174510032227
+    second: pochtaru_106
+  - first:
+      213: 3680415508901284039
+    second: pochtaru_107
+  - first:
+      213: 2775455216849553737
+    second: pochtaru_108
+  - first:
+      213: 1790203490425372418
+    second: pochtaru_109
+  - first:
+      213: -5305808351977735129
+    second: pochtaru_110
+  - first:
+      213: 5496181799238025875
+    second: pochtaru_111
+  - first:
+      213: 6824639619808642365
+    second: pochtaru_112
+  - first:
+      213: 2495025419058445330
+    second: pochtaru_113
+  - first:
+      213: 3694720838603757323
+    second: pochtaru_114
+  - first:
+      213: 3092916099588730059
+    second: pochtaru_115
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: pochtaru_0
+      rect:
+        serializedVersion: 2
+        x: 964
+        y: 1715
+        width: 29
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e95d1b255ac261f40800000000000000
+      internalID: 5698791467052553630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_1
+      rect:
+        serializedVersion: 2
+        x: 979
+        y: 1801
+        width: 40
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b37479fec17026c0800000000000000
+      internalID: -4170208121182719048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_2
+      rect:
+        serializedVersion: 2
+        x: 983
+        y: 1737
+        width: 33
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: defc955da232fe130800000000000000
+      internalID: 3598133294167347181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_3
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 1502
+        width: 192
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7afd956f775b00e0800000000000000
+      internalID: -2302650579792561541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_4
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 1625
+        width: 80
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17cfacb4ff8cf6b00800000000000000
+      internalID: 824098255645899889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_5
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1662
+        width: 42
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e1825b5a7bfb8ca0800000000000000
+      internalID: -6013436374486449692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_6
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 1721
+        width: 43
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9828b300415277ce0800000000000000
+      internalID: -1407615590696516983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_7
+      rect:
+        serializedVersion: 2
+        x: 935
+        y: 1712
+        width: 42
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 124652d9804ca6de0800000000000000
+      internalID: -1339042397914045407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_8
+      rect:
+        serializedVersion: 2
+        x: 1004
+        y: 1718
+        width: 30
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f33806c9354358f20800000000000000
+      internalID: 3424200625395630911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_9
+      rect:
+        serializedVersion: 2
+        x: 1022
+        y: 1710
+        width: 43
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96f91baa68ba86ed0800000000000000
+      internalID: -2420496204833906839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_10
+      rect:
+        serializedVersion: 2
+        x: 1123
+        y: 1680
+        width: 39
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9d5b1e6299b4f1c0800000000000000
+      internalID: -4470744491508408931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_11
+      rect:
+        serializedVersion: 2
+        x: 1187
+        y: 1623
+        width: 97
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff983ddfdaf011b80800000000000000
+      internalID: -8425936187871229441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_12
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 1500
+        width: 196
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3a46c21ba1b956e0800000000000000
+      internalID: -1848250823746368964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_13
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 1468
+        width: 229
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 604c2beb090d99850800000000000000
+      internalID: 6384363266867643398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_14
+      rect:
+        serializedVersion: 2
+        x: 694
+        y: 1656
+        width: 34
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13477c4aa0b256e70800000000000000
+      internalID: 9107733146140898353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_15
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 1654
+        width: 85
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 491d20f41345236f0800000000000000
+      internalID: -706409620788031084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_16
+      rect:
+        serializedVersion: 2
+        x: 917
+        y: 1654
+        width: 69
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eecc4cfa392a77490800000000000000
+      internalID: -7748545878674846482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_17
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 1677
+        width: 86
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6dedbbd0727243d60800000000000000
+      internalID: 7868957497610723030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_18
+      rect:
+        serializedVersion: 2
+        x: 1014
+        y: 1654
+        width: 68
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7aef1e3aaaecff320800000000000000
+      internalID: 2594019142677954215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_19
+      rect:
+        serializedVersion: 2
+        x: 1103
+        y: 1655
+        width: 64
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c9281b2b8cb8dec0800000000000000
+      internalID: -3541873801017415231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_20
+      rect:
+        serializedVersion: 2
+        x: 1149
+        y: 1668
+        width: 37
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 177d01c00d86b96d0800000000000000
+      internalID: -2982675085437905039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_21
+      rect:
+        serializedVersion: 2
+        x: 1270
+        y: 1657
+        width: 34
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0a17cd95943dde30800000000000000
+      internalID: 4529834617406429711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_22
+      rect:
+        serializedVersion: 2
+        x: 1425
+        y: 1470
+        width: 230
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe913c34eb26bae50800000000000000
+      internalID: 6821654629902916079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_23
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 1459
+        width: 95
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdc302bee97558900800000000000000
+      internalID: 686050858305076447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_24
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1138
+        width: 224
+        height: 420
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac15f50fb61924da0800000000000000
+      internalID: -5962043063904808502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_25
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 1536
+        width: 231
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8fc6bbed7b19c820800000000000000
+      internalID: 2938910459475447690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_26
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 1488
+        width: 57
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07e5f5f9e8bf54330800000000000000
+      internalID: 3694635659305115248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_27
+      rect:
+        serializedVersion: 2
+        x: 922
+        y: 1520
+        width: 40
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c081e65ee01d9b70800000000000000
+      internalID: 8907294253854589126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_28
+      rect:
+        serializedVersion: 2
+        x: 946
+        y: 1487
+        width: 108
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b31fd57fc215c3e0800000000000000
+      internalID: -2034198974442826824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_29
+      rect:
+        serializedVersion: 2
+        x: 1015
+        y: 1542
+        width: 232
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3af3cf9a80cf0a5e0800000000000000
+      internalID: -1900241928608530525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_30
+      rect:
+        serializedVersion: 2
+        x: 1038
+        y: 1524
+        width: 38
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9cf9dbd26c09cbf0800000000000000
+      internalID: -303697881135973221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_31
+      rect:
+        serializedVersion: 2
+        x: 1059
+        y: 1535
+        width: 53
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59c76cc479c4d2590800000000000000
+      internalID: -7697411975394460523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_32
+      rect:
+        serializedVersion: 2
+        x: 1085
+        y: 1488
+        width: 60
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8096972053d1e4ea0800000000000000
+      internalID: -5886735549414676216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_33
+      rect:
+        serializedVersion: 2
+        x: 1135
+        y: 1245
+        width: 220
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31294220baa490200800000000000000
+      internalID: 146730561202065939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_34
+      rect:
+        serializedVersion: 2
+        x: 1318
+        y: 1459
+        width: 97
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa0a760f69981e210800000000000000
+      internalID: 1360519843814023343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_35
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 1391
+        width: 384
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28c59fed6a4f60570800000000000000
+      internalID: 8432696349840465026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_36
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 1440
+        width: 122
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dd9aa5a913efd960800000000000000
+      internalID: 7629065993082019281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_37
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 1354
+        width: 106
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c65de531dda1e670800000000000000
+      internalID: 8566319080299910853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_38
+      rect:
+        serializedVersion: 2
+        x: 861
+        y: 1415
+        width: 57
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78c3e7f7127c11e50800000000000000
+      internalID: 6778417860856134791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_39
+      rect:
+        serializedVersion: 2
+        x: 906
+        y: 1359
+        width: 44
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2fbd64fa5c6896b0800000000000000
+      internalID: -5289358624442958037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_40
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 1453
+        width: 32
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 435eb089dfb36f260800000000000000
+      internalID: 7130953020351440180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_41
+      rect:
+        serializedVersion: 2
+        x: 946
+        y: 1432
+        width: 41
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 803eb81efcd1ca780800000000000000
+      internalID: -8670522403915570424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_42
+      rect:
+        serializedVersion: 2
+        x: 982
+        y: 1414
+        width: 36
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d11967548ba88790800000000000000
+      internalID: -7527578192259247659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_43
+      rect:
+        serializedVersion: 2
+        x: 1011
+        y: 1354
+        width: 159
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80efd6bcf84ea4140800000000000000
+      internalID: 4704824066986343944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_44
+      rect:
+        serializedVersion: 2
+        x: 1049
+        y: 1454
+        width: 31
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 565d190578c7fe460800000000000000
+      internalID: 7273168843840804197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_45
+      rect:
+        serializedVersion: 2
+        x: 1327
+        y: 1440
+        width: 121
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99bf82992c9ac7800800000000000000
+      internalID: 611550302673894297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_46
+      rect:
+        serializedVersion: 2
+        x: 1403
+        y: 1397
+        width: 307
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65bb9fad1ad70ea30800000000000000
+      internalID: 4242528983100013398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_47
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 1364
+        width: 289
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eed555c9dc47c31e0800000000000000
+      internalID: -2216768490133168658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_48
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 1299
+        width: 337
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb0521a73546b6b20800000000000000
+      internalID: 3128704675832025275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_49
+      rect:
+        serializedVersion: 2
+        x: 946
+        y: 1351
+        width: 35
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddc4c2803b8b8cee0800000000000000
+      internalID: -1240538618264793891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_50
+      rect:
+        serializedVersion: 2
+        x: 974
+        y: 1350
+        width: 49
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aadfb3bb501ab2bc0800000000000000
+      internalID: -3806772014023443030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_51
+      rect:
+        serializedVersion: 2
+        x: 1322
+        y: 1211
+        width: 312
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e27de175cbf6ecb10800000000000000
+      internalID: 2003661738932623150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_52
+      rect:
+        serializedVersion: 2
+        x: 1328
+        y: 1391
+        width: 106
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e7fd87da57615150800000000000000
+      internalID: 5859578230046848993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_53
+      rect:
+        serializedVersion: 2
+        x: 1421
+        y: 1364
+        width: 289
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2287e7d814427cb0800000000000000
+      internalID: -4867753373741907414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_54
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 1211
+        width: 313
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfd078fdd00b0b960800000000000000
+      internalID: 7615780543514742269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_55
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 1146
+        width: 326
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccb7999ede4f48330800000000000000
+      internalID: 3712361295523707852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_56
+      rect:
+        serializedVersion: 2
+        x: 814
+        y: 1159
+        width: 83
+        height: 194
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7579fd7b8163d50f0800000000000000
+      internalID: -1126684851980757161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_57
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 1284
+        width: 40
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91274ef8edbba8680800000000000000
+      internalID: -8751976361269890535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_58
+      rect:
+        serializedVersion: 2
+        x: 894
+        y: 1218
+        width: 54
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 230a65aafa33be7a0800000000000000
+      internalID: -6346922420278484942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_59
+      rect:
+        serializedVersion: 2
+        x: 922
+        y: 1287
+        width: 50
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ec815e5d041cab50800000000000000
+      internalID: 6605676801095208160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_60
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 1215
+        width: 44
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6dab5e1537ce6a10800000000000000
+      internalID: 1904678723380817261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_61
+      rect:
+        serializedVersion: 2
+        x: 974
+        y: 1280
+        width: 50
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18cf1272355b75fc0800000000000000
+      internalID: -3506134416141190015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_62
+      rect:
+        serializedVersion: 2
+        x: 1003
+        y: 1216
+        width: 43
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08cab689a899440d0800000000000000
+      internalID: -3439455394862486400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_63
+      rect:
+        serializedVersion: 2
+        x: 1028
+        y: 1287
+        width: 50
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffc998bacc9ae8a50800000000000000
+      internalID: 6525339606622772479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_64
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 1219
+        width: 55
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02a15a18703e67410800000000000000
+      internalID: 1474615549389773344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_65
+      rect:
+        serializedVersion: 2
+        x: 1079
+        y: 1284
+        width: 40
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7511a0eba1a18d1b0800000000000000
+      internalID: -5631722631867002537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_66
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 1275
+        width: 32
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2b8f33f2b1af0250800000000000000
+      internalID: 5913122625718029101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_67
+      rect:
+        serializedVersion: 2
+        x: 1121
+        y: 1297
+        width: 38
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6948bae0ab11e1ad0800000000000000
+      internalID: -2729724833332231018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_68
+      rect:
+        serializedVersion: 2
+        x: 1211
+        y: 1146
+        width: 362
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff5e0648a49d35090800000000000000
+      internalID: -8046849195109194241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_69
+      rect:
+        serializedVersion: 2
+        x: 1406
+        y: 1299
+        width: 278
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e928f6b911786b4c0800000000000000
+      internalID: -4272078686822366562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_70
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 1098
+        width: 150
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba6e78c22446f6f20800000000000000
+      internalID: 3418060877575218859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_71
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 1071
+        width: 117
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eda2daddd0bf92610800000000000000
+      internalID: 1597083579851811550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_72
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 1055
+        width: 72
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4377265f24cddd250800000000000000
+      internalID: 5971170861105968948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_73
+      rect:
+        serializedVersion: 2
+        x: 742
+        y: 1051
+        width: 45
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1de49618b2f7cb60800000000000000
+      internalID: 7766442954890472732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_74
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 1068
+        width: 47
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c314e2e1d3969360800000000000000
+      internalID: 7176085585925510089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_75
+      rect:
+        serializedVersion: 2
+        x: 885
+        y: 1160
+        width: 37
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: faacf41a55d2bedf0800000000000000
+      internalID: -149976316784948561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_76
+      rect:
+        serializedVersion: 2
+        x: 903
+        y: 1101
+        width: 37
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: feb0c978514d4d290800000000000000
+      internalID: -7866429460174861329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_77
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 1154
+        width: 45
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6169568908bf3860800000000000000
+      internalID: 7511925054525497707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_78
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 1080
+        width: 47
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d4b494af03136330800000000000000
+      internalID: 3702824276535325912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_79
+      rect:
+        serializedVersion: 2
+        x: 978
+        y: 1150
+        width: 43
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d98c10b56fac1730800000000000000
+      internalID: 3971241822715152856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_80
+      rect:
+        serializedVersion: 2
+        x: 1009
+        y: 1080
+        width: 45
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d160ce53a5e6cff0800000000000000
+      internalID: -16073058817121835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_81
+      rect:
+        serializedVersion: 2
+        x: 1028
+        y: 1154
+        width: 45
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b056b6c52cab52360800000000000000
+      internalID: 7144321727830123787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_82
+      rect:
+        serializedVersion: 2
+        x: 1060
+        y: 1103
+        width: 54
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 969bf116ae47ea8d0800000000000000
+      internalID: -2833198565568824983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_83
+      rect:
+        serializedVersion: 2
+        x: 1110
+        y: 1165
+        width: 73
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc5aa2bc590490910800000000000000
+      internalID: 1804044137841468877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_84
+      rect:
+        serializedVersion: 2
+        x: 1149
+        y: 1139
+        width: 62
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee059afddc8ff1c90800000000000000
+      internalID: -7196760116410363666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_85
+      rect:
+        serializedVersion: 2
+        x: 1161
+        y: 1060
+        width: 46
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc0d3db238d98a8c0800000000000000
+      internalID: -3987764283334995764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_86
+      rect:
+        serializedVersion: 2
+        x: 1213
+        y: 1050
+        width: 45
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c746eea8a3cb4540800000000000000
+      internalID: 4993299741126576070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_87
+      rect:
+        serializedVersion: 2
+        x: 1257
+        y: 1054
+        width: 72
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5dcffe4fc9e2bb70800000000000000
+      internalID: 8913443689112522075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_88
+      rect:
+        serializedVersion: 2
+        x: 1304
+        y: 1070
+        width: 115
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a994c4b3300bd9e50800000000000000
+      internalID: 6817798938835044762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_89
+      rect:
+        serializedVersion: 2
+        x: 1346
+        y: 1098
+        width: 151
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f530eaf8f3398e6f0800000000000000
+      internalID: -655111844579638433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_90
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 771
+        width: 396
+        height: 312
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0ffee6a0e640afd0800000000000000
+      internalID: -2332786676290617589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_91
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 1038
+        width: 64
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0909700ccbb2c7850800000000000000
+      internalID: 6376019262125346960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_92
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 1051
+        width: 40
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 766bb6a3c59c9f630800000000000000
+      internalID: 3961418745203373671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_93
+      rect:
+        serializedVersion: 2
+        x: 955
+        y: 833
+        width: 172
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 220d42a68fa50c9e0800000000000000
+      internalID: -1603181444364709854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_94
+      rect:
+        serializedVersion: 2
+        x: 977
+        y: 1010
+        width: 45
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5df3e481b9da2c910800000000000000
+      internalID: 1856236878069383125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_95
+      rect:
+        serializedVersion: 2
+        x: 1026
+        y: 950
+        width: 197
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54968419b33de0610800000000000000
+      internalID: 1589439971302336837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_96
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 1051
+        width: 39
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: defdc98af1bab36f0800000000000000
+      internalID: -703780764292161555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_97
+      rect:
+        serializedVersion: 2
+        x: 1085
+        y: 1038
+        width: 65
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8c1b212442493010800000000000000
+      internalID: 1169038438661037199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_98
+      rect:
+        serializedVersion: 2
+        x: 1310
+        y: 987
+        width: 81
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9584b70c1333d2f40800000000000000
+      internalID: 5705272591724005465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_99
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 750
+        width: 180
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c24c52d42cc33210800000000000000
+      internalID: 1311616375015097025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_100
+      rect:
+        serializedVersion: 2
+        x: 881
+        y: 671
+        width: 316
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d84bdc70bbac7160800000000000000
+      internalID: 7024678293288470736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_101
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 833
+        width: 176
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2b0b3fa0371922e0800000000000000
+      internalID: -2150161849226949842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_102
+      rect:
+        serializedVersion: 2
+        x: 1144
+        y: 796
+        width: 126
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b7c9548720cbaa50800000000000000
+      internalID: 6533526960387770294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_103
+      rect:
+        serializedVersion: 2
+        x: 1154
+        y: 771
+        width: 268
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb9a49e6c5d31cd00800000000000000
+      internalID: 991140860199741887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_104
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 495
+        width: 1950
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: beffd2f1783589ac0800000000000000
+      internalID: -3848234041779290133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_105
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 166
+        width: 123
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ff6fe7a1118b9d10800000000000000
+      internalID: 2133440761321975794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_106
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 163
+        width: 134
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9afa0d610aa84dc0800000000000000
+      internalID: -3654484174510032227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_107
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 166
+        width: 122
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c846e9d766731330800000000000000
+      internalID: 3680415508901284039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_108
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 166
+        width: 104
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 949825290d5648620800000000000000
+      internalID: 2775455216849553737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_109
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 166
+        width: 138
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20ff772f69418d810800000000000000
+      internalID: 1790203490425372418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_110
+      rect:
+        serializedVersion: 2
+        x: 970
+        y: 166
+        width: 110
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72cf01e4a6bfd56b0800000000000000
+      internalID: -5305808351977735129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_111
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 163
+        width: 134
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 392cc84f93c564c40800000000000000
+      internalID: 5496181799238025875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_112
+      rect:
+        serializedVersion: 2
+        x: 1259
+        y: 161
+        width: 116
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3540c2639df5be50800000000000000
+      internalID: 6824639619808642365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_113
+      rect:
+        serializedVersion: 2
+        x: 1398
+        y: 161
+        width: 118
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21c7c80466c10a220800000000000000
+      internalID: 2495025419058445330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_114
+      rect:
+        serializedVersion: 2
+        x: 1547
+        y: 166
+        width: 135
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b07d539f609464330800000000000000
+      internalID: 3694720838603757323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pochtaru_115
+      rect:
+        serializedVersion: 2
+        x: 1720
+        y: 166
+        width: 137
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcca21c3ece3cea20800000000000000
+      internalID: 3092916099588730059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      pochtaru_0: 5698791467052553630
+      pochtaru_1: -4170208121182719048
+      pochtaru_10: -4470744491508408931
+      pochtaru_100: 7024678293288470736
+      pochtaru_101: -2150161849226949842
+      pochtaru_102: 6533526960387770294
+      pochtaru_103: 991140860199741887
+      pochtaru_104: -3848234041779290133
+      pochtaru_105: 2133440761321975794
+      pochtaru_106: -3654484174510032227
+      pochtaru_107: 3680415508901284039
+      pochtaru_108: 2775455216849553737
+      pochtaru_109: 1790203490425372418
+      pochtaru_11: -8425936187871229441
+      pochtaru_110: -5305808351977735129
+      pochtaru_111: 5496181799238025875
+      pochtaru_112: 6824639619808642365
+      pochtaru_113: 2495025419058445330
+      pochtaru_114: 3694720838603757323
+      pochtaru_115: 3092916099588730059
+      pochtaru_12: -1848250823746368964
+      pochtaru_13: 6384363266867643398
+      pochtaru_14: 9107733146140898353
+      pochtaru_15: -706409620788031084
+      pochtaru_16: -7748545878674846482
+      pochtaru_17: 7868957497610723030
+      pochtaru_18: 2594019142677954215
+      pochtaru_19: -3541873801017415231
+      pochtaru_2: 3598133294167347181
+      pochtaru_20: -2982675085437905039
+      pochtaru_21: 4529834617406429711
+      pochtaru_22: 6821654629902916079
+      pochtaru_23: 686050858305076447
+      pochtaru_24: -5962043063904808502
+      pochtaru_25: 2938910459475447690
+      pochtaru_26: 3694635659305115248
+      pochtaru_27: 8907294253854589126
+      pochtaru_28: -2034198974442826824
+      pochtaru_29: -1900241928608530525
+      pochtaru_3: -2302650579792561541
+      pochtaru_30: -303697881135973221
+      pochtaru_31: -7697411975394460523
+      pochtaru_32: -5886735549414676216
+      pochtaru_33: 146730561202065939
+      pochtaru_34: 1360519843814023343
+      pochtaru_35: 8432696349840465026
+      pochtaru_36: 7629065993082019281
+      pochtaru_37: 8566319080299910853
+      pochtaru_38: 6778417860856134791
+      pochtaru_39: -5289358624442958037
+      pochtaru_4: 824098255645899889
+      pochtaru_40: 7130953020351440180
+      pochtaru_41: -8670522403915570424
+      pochtaru_42: -7527578192259247659
+      pochtaru_43: 4704824066986343944
+      pochtaru_44: 7273168843840804197
+      pochtaru_45: 611550302673894297
+      pochtaru_46: 4242528983100013398
+      pochtaru_47: -2216768490133168658
+      pochtaru_48: 3128704675832025275
+      pochtaru_49: -1240538618264793891
+      pochtaru_5: -6013436374486449692
+      pochtaru_50: -3806772014023443030
+      pochtaru_51: 2003661738932623150
+      pochtaru_52: 5859578230046848993
+      pochtaru_53: -4867753373741907414
+      pochtaru_54: 7615780543514742269
+      pochtaru_55: 3712361295523707852
+      pochtaru_56: -1126684851980757161
+      pochtaru_57: -8751976361269890535
+      pochtaru_58: -6346922420278484942
+      pochtaru_59: 6605676801095208160
+      pochtaru_6: -1407615590696516983
+      pochtaru_60: 1904678723380817261
+      pochtaru_61: -3506134416141190015
+      pochtaru_62: -3439455394862486400
+      pochtaru_63: 6525339606622772479
+      pochtaru_64: 1474615549389773344
+      pochtaru_65: -5631722631867002537
+      pochtaru_66: 5913122625718029101
+      pochtaru_67: -2729724833332231018
+      pochtaru_68: -8046849195109194241
+      pochtaru_69: -4272078686822366562
+      pochtaru_7: -1339042397914045407
+      pochtaru_70: 3418060877575218859
+      pochtaru_71: 1597083579851811550
+      pochtaru_72: 5971170861105968948
+      pochtaru_73: 7766442954890472732
+      pochtaru_74: 7176085585925510089
+      pochtaru_75: -149976316784948561
+      pochtaru_76: -7866429460174861329
+      pochtaru_77: 7511925054525497707
+      pochtaru_78: 3702824276535325912
+      pochtaru_79: 3971241822715152856
+      pochtaru_8: 3424200625395630911
+      pochtaru_80: -16073058817121835
+      pochtaru_81: 7144321727830123787
+      pochtaru_82: -2833198565568824983
+      pochtaru_83: 1804044137841468877
+      pochtaru_84: -7196760116410363666
+      pochtaru_85: -3987764283334995764
+      pochtaru_86: 4993299741126576070
+      pochtaru_87: 8913443689112522075
+      pochtaru_88: 6817798938835044762
+      pochtaru_89: -655111844579638433
+      pochtaru_9: -2420496204833906839
+      pochtaru_90: -2332786676290617589
+      pochtaru_91: 6376019262125346960
+      pochtaru_92: 3961418745203373671
+      pochtaru_93: -1603181444364709854
+      pochtaru_94: 1856236878069383125
+      pochtaru_95: 1589439971302336837
+      pochtaru_96: -703780764292161555
+      pochtaru_97: 1169038438661037199
+      pochtaru_98: 5705272591724005465
+      pochtaru_99: 1311616375015097025
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

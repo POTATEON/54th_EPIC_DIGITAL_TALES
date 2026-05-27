@@ -5,7 +5,7 @@ using TMPro;
 public class BattleManager : MonoBehaviour
 {
     public static BattleManager Instance { get; private set; }
-
+    public event System.Action<int> OnStepStarted;
     [Header("Battle Panel (скрывается только после смерти врага)")]
     [SerializeField] private GameObject battlePanel;
 
@@ -99,7 +99,20 @@ public class BattleManager : MonoBehaviour
         var step = _data.operations[_stepIndex];
         string normalized = NormalizeInput(rawInput);
 
-        if (IsCorrectInput(normalized, step))
+        bool isCorrect = false;
+
+        if (step.isSystem)
+        {
+            // Проверка системы уравнений
+            isCorrect = CheckSystemInput(normalized, step);
+        }
+        else
+        {
+            // Обычная проверка
+            isCorrect = IsCorrectInput(normalized, step);
+        }
+
+        if (isCorrect)
         {
             OnCorrectAnswer();
         }
@@ -108,6 +121,44 @@ public class BattleManager : MonoBehaviour
             OnWrongAnswer(rawInput, step);
         }
     }
+
+    /// <summary>
+    /// Проверка системы уравнений/неравенств
+    /// </summary>
+    private bool CheckSystemInput(string input, MathOperation step)
+    {
+        if (step.expectedSystemInputs == null || step.expectedSystemInputs.Length == 0)
+        {
+            Debug.LogWarning("[BattleManager] Система включена, но expectedSystemInputs пуст!");
+            return false;
+        }
+
+        // Разбиваем ввод игрока по разделителю ;
+        string[] parts = input.Split(';');
+
+        if (parts.Length != step.expectedSystemInputs.Length)
+        {
+            Debug.Log($"[BattleManager] Неверное количество уравнений. Ожидалось: {step.expectedSystemInputs.Length}, получено: {parts.Length}");
+            return false;
+        }
+
+        // Проверяем каждое уравнение
+        for (int i = 0; i < parts.Length; i++)
+        {
+            string partNormalized = NormalizeInput(parts[i]);
+            string expectedNormalized = NormalizeInput(step.expectedSystemInputs[i]);
+
+            if (partNormalized != expectedNormalized)
+            {
+                Debug.Log($"[BattleManager] Ошибка в уравнении {i + 1}. Ожидалось: '{step.expectedSystemInputs[i]}', получено: '{parts[i]}'");
+                return false;
+            }
+        }
+
+        Debug.Log("[BattleManager] Система решена верно!");
+        return true;
+    }
+
 
     /// <summary>
     /// Приводит ввод к единому формату для сравнения.
@@ -177,8 +228,10 @@ public class BattleManager : MonoBehaviour
 
     private void OnCorrectAnswer()
     {
-        Debug.Log($"[BattleManager] Правильный ответ на шаге {_stepIndex}");
+        TutorialHintManager.Instance?.HideHint();
 
+        Debug.Log($"[BattleManager] Правильный ответ на шаге {_stepIndex}");
+        calculator?.SetInteractable(false);
         // Блокируем ввод на момент перехода
         calculator?.SetInteractable(false);
 
@@ -225,9 +278,19 @@ public class BattleManager : MonoBehaviour
 
         _currentEnemy?.SetHpBarText(step.expression);
 
-        // Показываем калькулятор с подсказкой-выражением
         calculator?.Show(step.expression, step.abilities);
         calculator?.SetInteractable(true);
+
+        // 👇 ДОБАВЬТЕ ЭТОТ ЛОГ
+        Debug.Log($"[DEBUG] ShowCurrentStep: tutorialHint = {(step.tutorialHint != null ? step.tutorialHint.name : "NULL")}");
+
+        if (step.tutorialHint != null)
+        {
+            Debug.Log($"[DEBUG] Calling TutorialHintManager.ShowHint for '{step.tutorialHint.targetAbilityId}'");
+            TutorialHintManager.Instance?.ShowHint(step.tutorialHint);
+        }
+
+        OnStepStarted?.Invoke(_stepIndex);
 
         Debug.Log($"[BattleManager] Шаг {_stepIndex}: '{step.expression}'");
     }
